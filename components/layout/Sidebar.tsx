@@ -127,7 +127,7 @@ export default function Sidebar({ variant = "dashboard", newAppClick }: SidebarP
         const inner = (
           <motion.div
             className={`flex items-center gap-2 w-full px-2.5 py-[7px] rounded-md text-xs cursor-pointer mb-0.5 transition-colors ${
-              isActive ? "text-[#635BFF]" : "text-neutral-400 hover:text-neutral-100"
+              isActive ? "text-[#635BFF]" : "text-text-3 hover:text-text-1"
             }`}
             style={isActive ? { background: "rgba(99,91,255,0.09)" } : {}}
             whileTap={{ scale: 0.98 }}

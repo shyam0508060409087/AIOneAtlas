@@ -13,7 +13,7 @@ function AppStatusBadge({ status }: { status: string }) {
   const map: Record<string, { text: string; cls: string }> = {
     live:     { text: "● Live",     cls: "bg-[rgba(0,212,177,0.1)] text-[#00D4B1] border border-[rgba(0,212,177,0.2)]" },
     building: { text: "◎ Building", cls: "bg-[rgba(99,91,255,0.1)] text-[#635BFF] border border-[rgba(99,91,255,0.2)]" },
-    draft:    { text: "Draft",      cls: "bg-neutral-800 text-neutral-400 border border-neutral-700" },
+    draft:    { text: "Draft",      cls: "bg-[rgba(26,31,54,0.8)] text-text-3 border border-[rgba(255,255,255,0.12)]" },
   };
   const cfg = map[status] ?? { text: status, cls: "" };
   return (

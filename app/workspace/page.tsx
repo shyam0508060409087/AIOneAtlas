@@ -191,6 +191,16 @@ export default function WorkspacePage() {
             </div>
           </ArtifactCard>
         </div>
+
+        {/* ── BOTTOM STATUS BAR ── */}
+        <div className="flex items-center justify-between px-4 text-xs h-10" style={{ background: "var(--bg1)", borderTop: "1px solid var(--b0)", color: "var(--t4)" }}>
+          <span>Last modified: 2 hours ago</span>
+          <div className="flex items-center gap-3">
+            <span>Schema v3</span>
+            <div className="w-2 h-2 rounded-full" style={{ background: "#00D4B1", boxShadow: "0 0 6px #00D4B1" }} />
+            <span>Connected</span>
+          </div>
+        </div>
       </div>
 
       {/* ── CHAT RAIL ── */}

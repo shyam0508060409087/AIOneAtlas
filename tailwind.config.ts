@@ -13,12 +13,12 @@ const config: Config = {
         // ── Surfaces (dark layered system) ──
         surface: {
           0: "#0A2540",
-          1: "color-mix(in srgb, #0A2540 82%, #1A1F36)",
-          2: "color-mix(in srgb, #0A2540 62%, #1A1F36)",
-          3: "color-mix(in srgb, #0A2540 42%, #1A1F36)",
-          4: "color-mix(in srgb, #0A2540 26%, #1A1F36)",
-          5: "color-mix(in srgb, #0A2540 12%, #1A1F36)",
-          hover: "color-mix(in srgb, #1A1F36 88%, #635BFF)",
+          1: "#1A1F36",
+          2: "#1A1F36",
+          3: "#1A1F36",
+          4: "#1A1F36",
+          5: "#1A1F36",
+          hover: "#1A1F36",
         },
         // ── Borders ──
         border: {

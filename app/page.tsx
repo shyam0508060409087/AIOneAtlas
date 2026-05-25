@@ -252,6 +252,22 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ═══ ATLAS FOR ROLES ═══ */}
+      <section className="max-w-[1140px] mx-auto px-6 py-24">
+        <div className="mb-14 text-center">
+          <h2 className="font-extrabold tracking-tighter mb-3" style={{ fontSize: "clamp(30px, 4.5vw, 52px)" }}>Built for every role</h2>
+          <p className="text-lg max-w-[460px] mx-auto" style={{ color: "var(--t3)" }}>Whether you're a founder, operator, or engineer, OneAtlas adapts to your workflow.</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {[{ role: "Founders", use: "Validate ideas and launch MVPs in 60 seconds without engineering" }, { role: "Product Managers", use: "Build operational dashboards and internal tools instantly" }, { role: "Engineers", use: "Deploy production apps with customizable runtime and APIs" }].map((r) => (
+            <div key={r.role} className="rounded-2xl p-8" style={{ background: "var(--bg2)", border: "1px solid var(--b1)" }}>
+              <h3 className="font-bold text-lg mb-2">{r.role}</h3>
+              <p style={{ color: "var(--t3)" }}>{r.use}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ═══ TRENDING STRIP ═══ */}
       <section className="max-w-[1140px] mx-auto px-6 pb-24">
         <div className="flex items-center justify-between mb-4.5">
