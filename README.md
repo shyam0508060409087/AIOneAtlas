@@ -7,7 +7,7 @@ OneAtlas is a frontend product experience for an AI-native app builder. It prese
 Deployed on Vercel:
 
 ```text
-Add your Vercel URL here after deployment
+https://ai-one-atlas.vercel.app/
 ```
 
 ## Tech Stack
