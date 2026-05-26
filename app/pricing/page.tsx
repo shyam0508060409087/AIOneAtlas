@@ -34,7 +34,7 @@ const PRICING_TIERS = [
 
 export default function PricingPage() {
   return (
-    <div className="pt-[58px] min-h-screen" style={{ background: "var(--bg0)" }}>
+    <div className="pt-[58px] min-h-screen" style={{ background: "var(--bg-primary)" }}>
       {/* ── HERO ── */}
       <section className="max-w-[1140px] mx-auto px-6 py-20">
         <motion.div
@@ -52,7 +52,7 @@ export default function PricingPage() {
           </h1>
           <p
             className="text-lg max-w-[640px] mx-auto"
-            style={{ color: "var(--t2)", lineHeight: 1.7 }}
+            style={{ color: "var(--text-secondary)", lineHeight: 1.7 }}
           >
             Pay only for what you use. No hidden fees. Cancel anytime.
           </p>
@@ -67,8 +67,8 @@ export default function PricingPage() {
               key={tier.name}
               className="rounded-2xl p-8 relative overflow-hidden"
               style={{
-                background: tier.highlighted ? "linear-gradient(135deg, rgba(99,91,255,0.1), var(--bg2))" : "var(--bg2)",
-                border: tier.highlighted ? "2px solid rgba(99,91,255,0.3)" : "1px solid var(--b1)",
+                background: tier.highlighted ? "linear-gradient(135deg, rgba(99,91,255,0.1), var(--bg-secondary))" : "var(--bg-secondary)",
+                border: tier.highlighted ? "2px solid rgba(99,91,255,0.3)" : "1px solid var(--border-color)",
               }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -86,13 +86,13 @@ export default function PricingPage() {
               )}
 
               <h3 className="font-bold text-xl mb-2">{tier.name}</h3>
-              <p className="text-sm mb-6" style={{ color: "var(--t3)" }}>{tier.desc}</p>
+              <p className="text-sm mb-6" style={{ color: "var(--text-muted)" }}>{tier.desc}</p>
 
               <div className="mb-6">
                 <span className="font-black" style={{ fontSize: "42px" }}>
                   {tier.price}
                 </span>
-                {tier.period && <span style={{ color: "var(--t4)" }}>{tier.period}</span>}
+                {tier.period && <span style={{ color: "var(--text-muted)" }}>{tier.period}</span>}
               </div>
 
               <motion.button
@@ -106,7 +106,7 @@ export default function PricingPage() {
                 {tier.features.map((f) => (
                   <div key={f} className="flex items-start gap-2.5 text-sm">
                     <span style={{ color: "var(--teal)" }}>✓</span>
-                    <span style={{ color: "var(--t2)" }}>{f}</span>
+                    <span style={{ color: "var(--text-secondary)" }}>{f}</span>
                   </div>
                 ))}
               </div>
@@ -130,14 +130,14 @@ export default function PricingPage() {
             <motion.div
               key={item.q}
               className="rounded-xl p-6"
-              style={{ background: "var(--bg2)", border: "1px solid var(--b1)" }}
+              style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)" }}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
             >
               <h4 className="font-bold mb-2 text-sm">{item.q}</h4>
-              <p className="text-xs leading-relaxed" style={{ color: "var(--t3)" }}>{item.a}</p>
+              <p className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>{item.a}</p>
             </motion.div>
           ))}
         </div>

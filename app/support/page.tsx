@@ -21,7 +21,7 @@ const FAQ_ITEMS = [
 
 export default function SupportPage() {
   return (
-    <div className="pt-[58px] min-h-screen" style={{ background: "var(--bg0)" }}>
+    <div className="pt-[58px] min-h-screen" style={{ background: "var(--bg-primary)" }}>
       {/* ── HERO ── */}
       <section className="max-w-[1140px] mx-auto px-6 py-20">
         <motion.div
@@ -39,7 +39,7 @@ export default function SupportPage() {
           </h1>
           <p
             className="text-lg max-w-[640px] mx-auto"
-            style={{ color: "var(--t2)", lineHeight: 1.7 }}
+            style={{ color: "var(--text-secondary)", lineHeight: 1.7 }}
           >
             Get help through documentation, chat, or email. Our team responds within hours.
           </p>
@@ -54,7 +54,7 @@ export default function SupportPage() {
               key={channel.title}
               href={channel.link}
               className="rounded-xl p-8 cursor-pointer block"
-              style={{ background: "var(--bg2)", border: "1px solid var(--b1)" }}
+              style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)" }}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -63,7 +63,7 @@ export default function SupportPage() {
             >
               <div className="text-4xl mb-4">{channel.icon}</div>
               <h3 className="font-bold text-lg mb-2">{channel.title}</h3>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--t3)" }}>{channel.desc}</p>
+              <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>{channel.desc}</p>
             </motion.a>
           ))}
         </div>
@@ -79,14 +79,14 @@ export default function SupportPage() {
             <motion.div
               key={item.q}
               className="rounded-xl p-6"
-              style={{ background: "var(--bg2)", border: "1px solid var(--b1)" }}
+              style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)" }}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
             >
               <h4 className="font-bold mb-2 text-sm">{item.q}</h4>
-              <p className="text-xs leading-relaxed" style={{ color: "var(--t3)" }}>{item.a}</p>
+              <p className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>{item.a}</p>
             </motion.div>
           ))}
         </div>

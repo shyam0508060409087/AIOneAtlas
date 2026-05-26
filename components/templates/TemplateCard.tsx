@@ -58,7 +58,7 @@ export default function TemplateCard({
             >
               <motion.button
                 className="tovbtn-p px-4 py-2 rounded-lg text-xs font-semibold text-white"
-                style={{ background: "var(--v)", boxShadow: "0 2px 12px rgba(99,91,255,0.35)" }}
+                style={{ background: "var(--accent-primary)", boxShadow: "0 2px 12px rgba(99,91,255,0.35)" }}
                 onClick={(e) => { e.stopPropagation(); onPreview(template); }}
                 whileHover={{ background: "var(--v2)" }}
                 whileTap={{ scale: 0.97 }}
@@ -67,7 +67,7 @@ export default function TemplateCard({
               </motion.button>
               <motion.button
                 className="px-4 py-2 rounded-lg text-xs font-semibold"
-                style={{ background: "var(--bg4)", color: "var(--t1)", border: "1px solid var(--b2)" }}
+                style={{ background: "var(--bg4)", color: "var(--text-primary)", border: "1px solid var(--b2)" }}
                 onClick={(e) => { e.stopPropagation(); onUse(template); }}
                 whileHover={{ background: "var(--bg5)" }}
                 whileTap={{ scale: 0.97 }}
@@ -82,14 +82,14 @@ export default function TemplateCard({
       {/* Info */}
       <div className="p-[15px]">
         <p className="text-sm font-semibold mb-1">{template.name}</p>
-        <p className="text-xs leading-[1.55] mb-3" style={{ color: "var(--t3)" }}>
+        <p className="text-xs leading-[1.55] mb-3" style={{ color: "var(--text-muted)" }}>
           {template.description}
         </p>
 
         <div className="flex items-center justify-between">
           <div className="flex gap-1.5 flex-wrap">
             {template.tags.map((tag) => (
-              <span key={tag} className="text-[10px] px-2 py-[2px] rounded-full" style={{ background: "var(--bg4)", color: "var(--t4)", border: "1px solid var(--b1)" }}>
+              <span key={tag} className="text-[10px] px-2 py-[2px] rounded-full" style={{ background: "var(--bg4)", color: "var(--text-muted)", border: "1px solid var(--border-color)" }}>
                 {tag}
               </span>
             ))}
@@ -100,8 +100,8 @@ export default function TemplateCard({
             className="w-7 h-7 rounded-md flex items-center justify-center text-[13px] transition-colors flex-shrink-0"
             style={{
               background: "var(--bg3)",
-              border: "1px solid var(--b1)",
-              color: saved ? "var(--amber)" : "var(--t4)",
+              border: "1px solid var(--border-color)",
+              color: saved ? "var(--amber)" : "var(--text-muted)",
             }}
             whileHover={{
               color: "var(--amber)",
@@ -118,7 +118,7 @@ export default function TemplateCard({
           </motion.button>
         </div>
 
-        <p className="text-[11px] mt-2" style={{ color: "var(--t4)" }}>
+        <p className="text-[11px] mt-2" style={{ color: "var(--text-muted)" }}>
           {template.usersBuilt} apps built
         </p>
       </div>

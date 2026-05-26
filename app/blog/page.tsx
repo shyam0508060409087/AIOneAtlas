@@ -13,7 +13,7 @@ const BLOG_POSTS = [
 
 export default function BlogPage() {
   return (
-    <div className="pt-[58px] min-h-screen" style={{ background: "var(--bg0)" }}>
+    <div className="pt-[58px] min-h-screen" style={{ background: "var(--bg-primary)" }}>
       {/* ── HERO ── */}
       <section className="max-w-[1140px] mx-auto px-6 py-20">
         <motion.div
@@ -31,7 +31,7 @@ export default function BlogPage() {
           </h1>
           <p
             className="text-lg max-w-[640px] mx-auto"
-            style={{ color: "var(--t2)", lineHeight: 1.7 }}
+            style={{ color: "var(--text-secondary)", lineHeight: 1.7 }}
           >
             Product releases, technical deep dives, and stories from builders on OneAtlas.
           </p>
@@ -45,7 +45,7 @@ export default function BlogPage() {
             <motion.div
               key={post.title}
               className="rounded-xl p-6 cursor-pointer"
-              style={{ background: "var(--bg2)", border: "1px solid var(--b1)" }}
+              style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)" }}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -53,10 +53,10 @@ export default function BlogPage() {
               whileHover={{ x: 4 }}
             >
               <div className="flex items-start justify-between gap-4 mb-3">
-                <p className="text-xs font-medium" style={{ color: "var(--t4)" }}>{post.date}</p>
+                <p className="text-xs font-medium" style={{ color: "var(--text-muted)" }}>{post.date}</p>
               </div>
               <h3 className="font-bold text-lg mb-2">{post.title}</h3>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--t3)" }}>{post.desc}</p>
+              <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>{post.desc}</p>
               <p className="text-xs mt-4 text-accent-light">Read more →</p>
             </motion.div>
           ))}

@@ -63,7 +63,7 @@ const TEMPLATE_SIDEBAR: SidebarItem[] = [
 const BADGE_STYLES: Record<"live" | "new" | "building", string> = {
   live:     "bg-[rgba(0,212,177,0.1)]   text-[var(--teal)]  border border-[rgba(0,212,177,0.2)]",
   new:      "bg-[rgba(248,188,66,0.1)]  text-[var(--amber)]  border border-[rgba(248,188,66,0.2)]",
-  building: "bg-[rgba(99,91,255,0.1)] text-[var(--v)] border border-[rgba(99,91,255,0.2)]",
+  building: "bg-[rgba(99,91,255,0.1)] text-[var(--accent-primary)] border border-[rgba(99,91,255,0.2)]",
 };
 
 // ── COMPONENT ────────────────────────────────────────────────────
@@ -80,13 +80,13 @@ export default function Sidebar({ variant = "dashboard", newAppClick }: SidebarP
   return (
     <aside
       className="sticky top-[58px] h-[calc(100vh-58px)] overflow-y-auto overflow-x-hidden flex flex-col px-2.5 py-3.5"
-      style={{ background: "var(--bg1)", borderRight: "1px solid var(--b0)", scrollbarWidth: "none" }}
+      style={{ background: "var(--bg-secondary)", borderRight: "1px solid var(--border-light)", scrollbarWidth: "none" }}
     >
       {/* Templates header */}
       {variant === "templates" && (
         <div className="px-2.5 pb-3 mb-1">
           <p className="text-[15px] font-bold tracking-tight">Templates</p>
-          <p className="text-[11px] mt-0.5" style={{ color: "var(--t4)" }}>120 ready-to-use apps</p>
+          <p className="text-[11px] mt-0.5" style={{ color: "var(--text-muted)" }}>120 ready-to-use apps</p>
         </div>
       )}
 
@@ -95,7 +95,7 @@ export default function Sidebar({ variant = "dashboard", newAppClick }: SidebarP
         <motion.button
           onClick={newAppClick}
           className="flex items-center gap-2 w-full px-3 py-2.5 mb-3 rounded-lg text-sm font-semibold text-white"
-          style={{ background: "var(--v)", boxShadow: "0 2px 14px rgba(99,91,255,0.3)" }}
+          style={{ background: "var(--accent-primary)", boxShadow: "0 2px 14px rgba(99,91,255,0.3)" }}
           whileHover={{ opacity: 0.9, boxShadow: "0 4px 22px rgba(99,91,255,0.45)" }}
           whileTap={{ scale: 0.98 }}
         >
@@ -111,7 +111,7 @@ export default function Sidebar({ variant = "dashboard", newAppClick }: SidebarP
             <p
               key={`section-${i}`}
               className="text-[10px] font-bold tracking-[0.1em] uppercase px-2.5 mt-3 mb-1"
-              style={{ color: "var(--t4)" }}
+              style={{ color: "var(--text-muted)" }}
             >
               {item.section}
             </p>
@@ -127,7 +127,7 @@ export default function Sidebar({ variant = "dashboard", newAppClick }: SidebarP
         const inner = (
           <motion.div
             className={`flex items-center gap-2 w-full px-2.5 py-[7px] rounded-md text-xs cursor-pointer mb-0.5 transition-colors ${
-              isActive ? "text-[var(--v)]" : "text-text-3 hover:text-text-1"
+              isActive ? "text-[var(--accent-primary)]" : "text-text-3 hover:text-text-1"
             }`}
             style={isActive ? { background: "rgba(99,91,255,0.09)" } : {}}
             whileTap={{ scale: 0.98 }}

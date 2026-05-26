@@ -116,16 +116,16 @@ export default function ChatRail() {
   return (
     <div
       className="flex flex-col h-full overflow-hidden"
-      style={{ background: "var(--bg1)", borderLeft: "1px solid var(--b0)" }}
+      style={{ background: "var(--bg-secondary)", borderLeft: "1px solid var(--border-light)" }}
     >
       {/* Header */}
       <div
         className="flex items-center gap-2 px-4 py-3.5 flex-shrink-0"
-        style={{ borderBottom: "1px solid var(--b0)" }}
+        style={{ borderBottom: "1px solid var(--border-light)" }}
       >
         <div
           className="w-[22px] h-[22px] rounded-[5px] flex items-center justify-center text-[10px] flex-shrink-0"
-          style={{ background: "linear-gradient(135deg, var(--v), var(--v2))" }}
+          style={{ background: "linear-gradient(135deg, var(--accent-primary), var(--v2))" }}
         >
           🌐
         </div>
@@ -159,11 +159,11 @@ export default function ChatRail() {
                   <div className="flex items-center gap-1.5 mb-1.5">
                     <div
                       className="w-[18px] h-[18px] rounded-[4px] flex items-center justify-center text-[9px]"
-                      style={{ background: "linear-gradient(135deg, var(--v), var(--v2))" }}
+                      style={{ background: "linear-gradient(135deg, var(--accent-primary), var(--v2))" }}
                     >
                       🌐
                     </div>
-                    <span className="text-[10px]" style={{ color: "var(--t4)" }}>
+                    <span className="text-[10px]" style={{ color: "var(--text-muted)" }}>
                       OneAtlas · {msg.timestamp}
                     </span>
                   </div>
@@ -204,12 +204,12 @@ export default function ChatRail() {
       </div>
 
       {/* Input */}
-      <div className="p-3 flex-shrink-0" style={{ borderTop: "1px solid var(--b0)" }}>
+      <div className="p-3 flex-shrink-0" style={{ borderTop: "1px solid var(--border-light)" }}>
         <div
           className="flex items-end gap-2 rounded-xl px-2.5 py-2 transition-all duration-200"
           style={{
-            background: "var(--bg2)",
-            border: "1px solid var(--b1)",
+            background: "var(--bg-secondary)",
+            border: "1px solid var(--border-color)",
           }}
           onFocus={(e) => {
             const el = e.currentTarget;
@@ -218,7 +218,7 @@ export default function ChatRail() {
           }}
           onBlur={(e) => {
             const el = e.currentTarget;
-            el.style.borderColor = "var(--b1)";
+            el.style.borderColor = "var(--border-color)";
             el.style.boxShadow = "none";
           }}
         >
@@ -231,14 +231,14 @@ export default function ChatRail() {
             rows={1}
             className="flex-1 bg-transparent outline-none resize-none text-xs leading-relaxed"
             style={{
-              color: "var(--t1)",
-              caretColor: "var(--v)",
+              color: "var(--text-primary)",
+              caretColor: "var(--accent-primary)",
               maxHeight: "80px",
             }}
           />
           <motion.button
             className="w-7 h-7 rounded-md flex items-center justify-center flex-shrink-0 text-[13px] text-white"
-            style={{ background: "var(--v)" }}
+            style={{ background: "var(--accent-primary)" }}
             onClick={send}
             whileHover={{ background: "var(--v2)", scale: 1.05 }}
             whileTap={{ scale: 0.94 }}

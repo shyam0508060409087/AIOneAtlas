@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <motion.nav initial={{ y: -8, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }} className={`fixed top-0 left-0 right-0 z-50 h-[58px] flex items-center justify-between px-7 transition-all duration-300 ${scrolled ? "bg-[rgba(10,37,64,0.92)] border-b border-[rgba(255,255,255,0.07)]" : "bg-[rgba(10,37,64,0.75)]"}`} style={{ backdropFilter: "blur(28px)" }}>
       <Link href="/" className="flex items-center gap-2.5">
-        <div className="w-8 h-8 rounded-[10px] flex items-center justify-center text-base" style={{ background: "linear-gradient(135deg, var(--v), var(--v2))" }}>🌐</div>
+        <div className="w-8 h-8 rounded-[10px] flex items-center justify-center text-base" style={{ background: "linear-gradient(135deg, var(--accent-primary), var(--v2))" }}>🌐</div>
         <span className="text-[15px] font-bold" style={{ background: "linear-gradient(90deg, #fff, var(--v2))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>OneAtlas</span>
         <span className="badge-accent text-[9px]">BETA</span>
       </Link>

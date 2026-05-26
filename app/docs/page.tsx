@@ -14,7 +14,7 @@ const DOC_SECTIONS = [
 
 export default function DocsPage() {
   return (
-    <div className="pt-[58px] min-h-screen" style={{ background: "var(--bg0)" }}>
+    <div className="pt-[58px] min-h-screen" style={{ background: "var(--bg-primary)" }}>
       {/* ── HERO ── */}
       <section className="max-w-[1140px] mx-auto px-6 py-20">
         <motion.div
@@ -32,7 +32,7 @@ export default function DocsPage() {
           </h1>
           <p
             className="text-lg max-w-[640px] mx-auto mb-8"
-            style={{ color: "var(--t2)", lineHeight: 1.7 }}
+            style={{ color: "var(--text-secondary)", lineHeight: 1.7 }}
           >
             Comprehensive guides, API reference, and examples to help you build, deploy, and scale apps on OneAtlas.
           </p>
@@ -57,7 +57,7 @@ export default function DocsPage() {
             <motion.div
               key={section.title}
               className="rounded-xl p-6 cursor-pointer"
-              style={{ background: "var(--bg2)", border: "1px solid var(--b1)" }}
+              style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)" }}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -66,7 +66,7 @@ export default function DocsPage() {
             >
               <div className="text-3xl mb-3">{section.icon}</div>
               <h3 className="font-bold mb-2 text-sm">{section.title}</h3>
-              <p className="text-xs leading-relaxed" style={{ color: "var(--t3)" }}>{section.desc}</p>
+              <p className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>{section.desc}</p>
             </motion.div>
           ))}
         </div>

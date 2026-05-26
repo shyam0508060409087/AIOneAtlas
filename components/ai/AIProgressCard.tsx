@@ -26,7 +26,7 @@ const DEFAULT_STEPS: AIStep[] = [
 const STEP_DOT = {
   done:    { bg: "rgba(0,212,177,0.12)",   color: "var(--teal)", icon: "✓" },
   active:  { bg: "rgba(99,91,255,0.12)", color: "var(--v2)", icon: "⟳" },
-  waiting: { bg: "var(--bg4)",             color: "var(--t4)", icon: "○" },
+  waiting: { bg: "var(--bg4)",             color: "var(--text-muted)", icon: "○" },
 };
 
 export function StreamingCursor() {
@@ -82,7 +82,7 @@ export default function AIProgressCard({
       <div className="flex items-center gap-2.5 mb-4 text-sm font-semibold">
         <div
           className="w-7 h-7 rounded-[7px] flex items-center justify-center text-sm flex-shrink-0"
-          style={{ background: "linear-gradient(135deg, var(--v), var(--v2))" }}
+          style={{ background: "linear-gradient(135deg, var(--accent-primary), var(--v2))" }}
         >
           🌐
         </div>
@@ -128,9 +128,9 @@ export default function AIProgressCard({
               <span
                 style={{
                   color:
-                    step.status === "done"    ? "var(--t3)" :
-                    step.status === "active"  ? "var(--t1)" :
-                    "var(--t4)",
+                    step.status === "done"    ? "var(--text-muted)" :
+                    step.status === "active"  ? "var(--text-primary)" :
+                    "var(--text-muted)",
                   fontWeight: step.status === "active" ? "500" : undefined,
                 }}
               >
@@ -151,7 +151,7 @@ export default function AIProgressCard({
           className="mt-3.5 pt-3 text-[11px] leading-relaxed"
           style={{
             borderTop: "1px solid rgba(255,255,255,0.04)",
-            color: "var(--t3)",
+            color: "var(--text-muted)",
           }}
         >
           ✦ {explanation}{" "}

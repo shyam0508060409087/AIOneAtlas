@@ -58,7 +58,7 @@ export default function Modal({
             style={{
               maxWidth,
               maxHeight: "90vh",
-              background: "var(--bg2)",
+              background: "var(--bg-secondary)",
               border: "1px solid var(--b2)",
               boxShadow:
                 "0 8px 48px rgba(0,0,0,0.55), 0 2px 8px rgba(0,0,0,0.6)",
@@ -75,11 +75,11 @@ export default function Modal({
                 className="w-[30px] h-[30px] rounded-md flex items-center justify-center text-sm"
                 style={{
                   background: "var(--bg3)",
-                  border: "1px solid var(--b1)",
-                  color: "var(--t3)",
+                  border: "1px solid var(--border-color)",
+                  color: "var(--text-muted)",
                 }}
                 onClick={onClose}
-                whileHover={{ background: "var(--bg4)", color: "var(--t1)" }}
+                whileHover={{ background: "var(--bg4)", color: "var(--text-primary)" }}
                 whileTap={{ scale: 0.95 }}
               >
                 ✕
@@ -135,16 +135,16 @@ export function CompareContent({ onUse }: CompareContentProps) {
           <div
             key={col.name}
             className="rounded-xl p-4"
-            style={{ background: "var(--bg3)", border: "1px solid var(--b1)" }}
+            style={{ background: "var(--bg3)", border: "1px solid var(--border-color)" }}
           >
             <h4 className="text-sm font-bold mb-3">{col.name}</h4>
             {col.rows.map(([k, v]) => (
               <div
                 key={k}
                 className="flex justify-between items-center text-xs py-1.5"
-                style={{ borderBottom: "1px solid var(--b0)" }}
+                style={{ borderBottom: "1px solid var(--border-light)" }}
               >
-                <span style={{ color: "var(--t3)" }}>{k}</span>
+                <span style={{ color: "var(--text-muted)" }}>{k}</span>
                 <span className="font-medium">{v}</span>
               </div>
             ))}
@@ -195,7 +195,7 @@ export function PreviewContent({
       {/* Preview canvas */}
       <div
         className="h-[380px] rounded-xl flex items-center justify-center text-7xl mb-5 relative overflow-hidden"
-        style={{ background: "var(--bg3)", border: "1px solid var(--b1)" }}
+        style={{ background: "var(--bg3)", border: "1px solid var(--border-color)" }}
       >
         <div
           className="absolute inset-0 pointer-events-none"

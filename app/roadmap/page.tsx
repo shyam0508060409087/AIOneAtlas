@@ -14,7 +14,7 @@ const PRIORITY_STYLES = {
 const STATUS_STYLES = {
   done:     { bg: "rgba(0,212,177,0.1)",   color: "var(--teal)", text: "✓ Done" },
   building: { bg: "rgba(248,188,66,0.1)",  color: "var(--amber)", text: "⟳ Building" },
-  planned:  { bg: "var(--bg4)",            color: "var(--t4)", text: "📋 Planned" },
+  planned:  { bg: "var(--bg4)",            color: "var(--text-muted)", text: "📋 Planned" },
 };
 
 export default function RoadmapPage() {
@@ -42,7 +42,7 @@ export default function RoadmapPage() {
             OneAtlas Build Plan<br />
             <span
               style={{
-                background: "linear-gradient(135deg, #fff 0%, var(--v2) 55%, var(--v) 100%)",
+                background: "linear-gradient(135deg, #fff 0%, var(--v2) 55%, var(--accent-primary) 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -50,7 +50,7 @@ export default function RoadmapPage() {
               Phase 0 → Enterprise
             </span>
           </h1>
-          <p className="text-md" style={{ color: "var(--t3)" }}>
+          <p className="text-md" style={{ color: "var(--text-muted)" }}>
             Fully transparent — see exactly what&apos;s done, in progress, and coming.
           </p>
 
@@ -59,15 +59,15 @@ export default function RoadmapPage() {
             {[
               { label: "Done",     count: ROADMAP_ITEMS.filter(r => r.status === "done").length,     color: "var(--teal)" },
               { label: "Building", count: ROADMAP_ITEMS.filter(r => r.status === "building").length, color: "var(--amber)" },
-              { label: "Planned",  count: ROADMAP_ITEMS.filter(r => r.status === "planned").length,  color: "var(--t3)" },
+              { label: "Planned",  count: ROADMAP_ITEMS.filter(r => r.status === "planned").length,  color: "var(--text-muted)" },
             ].map(({ label, count, color }) => (
               <div
                 key={label}
                 className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm"
-                style={{ background: "var(--bg2)", border: "1px solid var(--b1)" }}
+                style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)" }}
               >
                 <span className="text-xl font-black" style={{ color }}>{count}</span>
-                <span style={{ color: "var(--t3)" }}>{label}</span>
+                <span style={{ color: "var(--text-muted)" }}>{label}</span>
               </div>
             ))}
           </div>
@@ -132,7 +132,7 @@ export default function RoadmapPage() {
                       {/* KPI */}
                       <span
                         className="text-[11px] flex-shrink-0 max-w-[190px] text-right leading-snug hidden lg:block"
-                        style={{ color: "var(--t4)" }}
+                        style={{ color: "var(--text-muted)" }}
                       >
                         {item.kpi}
                       </span>
@@ -157,7 +157,7 @@ export default function RoadmapPage() {
           transition={{ duration: 0.4 }}
         >
           <h3 className="text-xl font-bold tracking-tight mb-2">Want to influence the roadmap?</h3>
-          <p className="text-sm mb-5" style={{ color: "var(--t3)" }}>
+          <p className="text-sm mb-5" style={{ color: "var(--text-muted)" }}>
             Join 4,200+ builders shaping OneAtlas. Feature requests are reviewed weekly.
           </p>
           <div className="flex items-center justify-center gap-3 flex-wrap">

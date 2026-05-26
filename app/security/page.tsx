@@ -22,7 +22,7 @@ const COMPLIANCE = [
 
 export default function SecurityPage() {
   return (
-    <div className="pt-[58px] min-h-screen" style={{ background: "var(--bg0)" }}>
+    <div className="pt-[58px] min-h-screen" style={{ background: "var(--bg-primary)" }}>
       {/* ── HERO ── */}
       <section className="max-w-[1140px] mx-auto px-6 py-20">
         <motion.div
@@ -40,7 +40,7 @@ export default function SecurityPage() {
           </h1>
           <p
             className="text-lg max-w-[640px] mx-auto mb-8"
-            style={{ color: "var(--t2)", lineHeight: 1.7 }}
+            style={{ color: "var(--text-secondary)", lineHeight: 1.7 }}
           >
             Built from day one with zero-trust architecture, end-to-end encryption, and compliance standards for regulated industries.
           </p>
@@ -60,7 +60,7 @@ export default function SecurityPage() {
             <motion.div
               key={f.title}
               className="rounded-xl p-6"
-              style={{ background: "var(--bg2)", border: "1px solid var(--b1)" }}
+              style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)" }}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -69,7 +69,7 @@ export default function SecurityPage() {
             >
               <div className="text-3xl mb-3">{f.icon}</div>
               <h3 className="font-bold mb-2 text-sm">{f.title}</h3>
-              <p className="text-xs leading-relaxed" style={{ color: "var(--t3)" }}>{f.desc}</p>
+              <p className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>{f.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -85,7 +85,7 @@ export default function SecurityPage() {
             <motion.div
               key={c.name}
               className="rounded-xl p-6 flex items-center justify-between"
-              style={{ background: "var(--bg2)", border: "1px solid var(--b1)" }}
+              style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)" }}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -93,7 +93,7 @@ export default function SecurityPage() {
             >
               <div>
                 <p className="font-bold text-sm mb-1">{c.name}</p>
-                <p className="text-xs" style={{ color: "var(--t3)" }}>{c.status}</p>
+                <p className="text-xs" style={{ color: "var(--text-muted)" }}>{c.status}</p>
               </div>
               <span
                 className="text-2xl"

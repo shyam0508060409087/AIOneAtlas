@@ -25,7 +25,7 @@ const TIER_COMPARISON = [
 
 export default function EnterprisePage() {
   return (
-    <div className="pt-[58px] min-h-screen" style={{ background: "var(--bg0)" }}>
+    <div className="pt-[58px] min-h-screen" style={{ background: "var(--bg-primary)" }}>
       {/* ── HERO ── */}
       <section className="max-w-[1140px] mx-auto px-6 py-20">
         <motion.div
@@ -43,7 +43,7 @@ export default function EnterprisePage() {
           </h1>
           <p
             className="text-lg max-w-[640px] mx-auto mb-8"
-            style={{ color: "var(--t2)", lineHeight: 1.7 }}
+            style={{ color: "var(--text-secondary)", lineHeight: 1.7 }}
           >
             SOC 2 certified infrastructure, SAML SSO, advanced audit logs, and dedicated support for teams building mission-critical apps.
           </p>
@@ -71,7 +71,7 @@ export default function EnterprisePage() {
             <motion.div
               key={f.title}
               className="rounded-xl p-6"
-              style={{ background: "var(--bg2)", border: "1px solid var(--b1)" }}
+              style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)" }}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -80,7 +80,7 @@ export default function EnterprisePage() {
             >
               <div className="text-3xl mb-3">{f.icon}</div>
               <h3 className="font-bold mb-2 text-sm">{f.title}</h3>
-              <p className="text-xs leading-relaxed" style={{ color: "var(--t3)" }}>{f.desc}</p>
+              <p className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>{f.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -91,15 +91,15 @@ export default function EnterprisePage() {
         <div className="mb-8">
           <h2 className="text-2xl font-bold tracking-tight text-center">Enterprise vs Other Tiers</h2>
         </div>
-        <div className="overflow-x-auto rounded-xl border" style={{ borderColor: "var(--b1)" }}>
+        <div className="overflow-x-auto rounded-xl border" style={{ borderColor: "var(--border-color)" }}>
           <table className="w-full text-sm">
             <tbody>
               {TIER_COMPARISON.map((row, i) => (
                 <tr
                   key={i}
                   style={{
-                    borderBottom: i < TIER_COMPARISON.length - 1 ? "1px solid var(--b1)" : "none",
-                    background: i === 0 ? "var(--bg2)" : "transparent",
+                    borderBottom: i < TIER_COMPARISON.length - 1 ? "1px solid var(--border-color)" : "none",
+                    background: i === 0 ? "var(--bg-secondary)" : "transparent",
                   }}
                 >
                   {row.map((cell, j) => (
@@ -108,7 +108,7 @@ export default function EnterprisePage() {
                       className="px-6 py-4 font-medium"
                       style={{
                         textAlign: j === 0 ? "left" : "center",
-                        color: i === 0 ? "var(--t1)" : "var(--t2)",
+                        color: i === 0 ? "var(--text-primary)" : "var(--text-secondary)",
                         background: j === 3 && i > 0 ? "rgba(99,91,255,0.08)" : "transparent",
                       }}
                     >

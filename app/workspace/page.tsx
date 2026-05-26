@@ -37,14 +37,14 @@ export default function WorkspacePage() {
       {/* ── LEFT NAV ── */}
       <div
         className="flex flex-col overflow-hidden"
-        style={{ background: "var(--bg1)", borderRight: "1px solid var(--b0)" }}
+        style={{ background: "var(--bg-secondary)", borderRight: "1px solid var(--border-light)" }}
       >
         <div className="flex items-center justify-between px-3 py-3.5">
           <span className="text-[13px] font-semibold">📊 Sales Dashboard</span>
           <motion.button
             className="w-[26px] h-[26px] rounded-[6px] flex items-center justify-center text-xs"
-            style={{ background: "var(--bg3)", border: "1px solid var(--b1)", color: "var(--t3)" }}
-            whileHover={{ background: "var(--bg4)", color: "var(--t1)" }}
+            style={{ background: "var(--bg3)", border: "1px solid var(--border-color)", color: "var(--text-muted)" }}
+            whileHover={{ background: "var(--bg4)", color: "var(--text-primary)" }}
             whileTap={{ scale: 0.95 }}
             onClick={() => toast("⚙️", "App settings coming soon")}
           >
@@ -55,7 +55,7 @@ export default function WorkspacePage() {
         <div className="flex-1 overflow-y-auto px-2 pb-4 scrollbar-none">
           {Object.entries(WS_NAV).map(([section, items]) => (
             <div key={section}>
-              <p className="text-[9px] font-bold tracking-[0.1em] uppercase px-2.5 py-2 mt-1" style={{ color: "var(--t4)" }}>
+              <p className="text-[9px] font-bold tracking-[0.1em] uppercase px-2.5 py-2 mt-1" style={{ color: "var(--text-muted)" }}>
                 {section}
               </p>
               {items.map(([icon, label]) => (
@@ -75,20 +75,20 @@ export default function WorkspacePage() {
       </div>
 
       {/* ── CANVAS ── */}
-      <div className="flex flex-col overflow-hidden" style={{ background: "var(--bg0)" }}>
+      <div className="flex flex-col overflow-hidden" style={{ background: "var(--bg-primary)" }}>
 
         {/* Canvas Bar */}
         <div
           className="flex items-center justify-between px-[18px] h-[46px] flex-shrink-0"
-          style={{ background: "var(--bg1)", borderBottom: "1px solid var(--b0)" }}
+          style={{ background: "var(--bg-secondary)", borderBottom: "1px solid var(--border-light)" }}
         >
           <div className="flex items-center gap-1.5 text-xs">
-            <span style={{ color: "var(--t4)" }}>Sales Dashboard</span>
-            <span style={{ color: "var(--t4)" }}>›</span>
+            <span style={{ color: "var(--text-muted)" }}>Sales Dashboard</span>
+            <span style={{ color: "var(--text-muted)" }}>›</span>
             <span className="font-medium">{activeNav}</span>
           </div>
 
-          <div className="flex gap-0.5 p-[3px] rounded-md" style={{ background: "var(--bg2)" }}>
+          <div className="flex gap-0.5 p-[3px] rounded-md" style={{ background: "var(--bg-secondary)" }}>
             {TABS.map((tab) => (
               <button
                 key={tab}
@@ -103,7 +103,7 @@ export default function WorkspacePage() {
           <div className="flex gap-1.5">
             <motion.button
               className="text-[11px] font-semibold px-3 py-1.5 rounded-md transition-all"
-              style={{ background: "var(--bg3)", color: "var(--t1)", border: "1px solid var(--b1)" }}
+              style={{ background: "var(--bg3)", color: "var(--text-primary)", border: "1px solid var(--border-color)" }}
               whileHover={{ borderColor: "var(--b2)" }}
               whileTap={{ scale: 0.97 }}
               onClick={() => toast("🔗", "Share link copied to clipboard!")}
@@ -155,7 +155,7 @@ export default function WorkspacePage() {
             badgeVariant="live"
             onRefresh={() => toast("🔄", "Refreshing AI summary...")}
           >
-            <p className="text-[13px] leading-[1.75]" style={{ color: "var(--t2)" }}>
+            <p className="text-[13px] leading-[1.75]" style={{ color: "var(--text-secondary)" }}>
               Revenue is up <strong className="text-text-1">23%</strong> — strongest week of Q2.
               The spike correlates with 3 enterprise deals closed Tuesday (Acme Corp, TechFlow, Nova Systems).
               Retention dipped 1.2% — I&apos;d recommend reviewing the 7-day cohort who signed up after the pricing change on May 18.{" "}
@@ -184,7 +184,7 @@ export default function WorkspacePage() {
                   whileHover={{ background: "var(--bg4)" }}
                 >
                   <span className="font-medium">{deal.name}</span>
-                  <span style={{ color: "var(--t4)" }}>{deal.amount}</span>
+                  <span style={{ color: "var(--text-muted)" }}>{deal.amount}</span>
                   <span className={`badge ${deal.badge}`}>{deal.status}</span>
                 </motion.div>
               ))}
@@ -193,7 +193,7 @@ export default function WorkspacePage() {
         </div>
 
         {/* ── BOTTOM STATUS BAR ── */}
-        <div className="flex items-center justify-between px-4 text-xs h-10" style={{ background: "var(--bg1)", borderTop: "1px solid var(--b0)", color: "var(--t4)" }}>
+        <div className="flex items-center justify-between px-4 text-xs h-10" style={{ background: "var(--bg-secondary)", borderTop: "1px solid var(--border-light)", color: "var(--text-muted)" }}>
           <span>Last modified: 2 hours ago</span>
           <div className="flex items-center gap-3">
             <span>Schema v3</span>

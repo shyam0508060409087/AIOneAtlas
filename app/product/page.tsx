@@ -39,7 +39,7 @@ const PLATFORM_MODULES = [
 
 export default function ProductPage() {
   return (
-    <div className="pt-[58px] min-h-screen" style={{ background: "var(--bg0)" }}>
+    <div className="pt-[58px] min-h-screen" style={{ background: "var(--bg-primary)" }}>
       <section className="max-w-[1140px] mx-auto px-6 py-20">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -57,7 +57,7 @@ export default function ProductPage() {
             >
               The frontend surface for building apps from plain English.
             </h1>
-            <p className="text-md max-w-[560px]" style={{ color: "var(--t2)", lineHeight: 1.75 }}>
+            <p className="text-md max-w-[560px]" style={{ color: "var(--text-secondary)", lineHeight: 1.75 }}>
               OneAtlas brings the core product journey into one frontend: explain the product,
               browse templates, generate an app shell, and review the AI builder workspace.
             </p>
@@ -72,7 +72,7 @@ export default function ProductPage() {
             </div>
           </div>
 
-          <div className="rounded-2xl p-5" style={{ background: "var(--bg2)", border: "1px solid var(--b1)" }}>
+          <div className="rounded-2xl p-5" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)" }}>
             <div className="flex items-center justify-between mb-4">
               <p className="text-sm font-bold">Platform Flow</p>
               <span className="badge-teal text-[9px]">Mapped</span>
@@ -82,14 +82,14 @@ export default function ProductPage() {
                 <div
                   key={label}
                   className="flex gap-3 rounded-xl p-3"
-                  style={{ background: "rgba(255,255,255,0.03)", border: "1px solid var(--b1)" }}
+                  style={{ background: "rgba(255,255,255,0.03)", border: "1px solid var(--border-color)" }}
                 >
                   <div
                     className="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold"
                     style={{
                       background:
                         index === 0
-                          ? "var(--v)"
+                          ? "var(--accent-primary)"
                           : index === 1
                             ? "var(--teal)"
                             : index === 2
@@ -102,7 +102,7 @@ export default function ProductPage() {
                   </div>
                   <div>
                     <p className="text-sm font-semibold">{label}</p>
-                    <p className="text-xs mt-0.5" style={{ color: "var(--t3)" }}>{detail}</p>
+                    <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>{detail}</p>
                   </div>
                 </div>
               ))}
@@ -124,7 +124,7 @@ export default function ProductPage() {
             <motion.div
               key={item.label}
               className="rounded-xl p-5"
-              style={{ background: "var(--bg2)", border: "1px solid var(--b1)" }}
+              style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)" }}
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -132,13 +132,13 @@ export default function ProductPage() {
               whileHover={{ y: -3, boxShadow: "0 8px 32px rgba(0,0,0,0.4)" }}
             >
               <div className="flex items-center justify-between gap-3 mb-4">
-                <p className="text-[11px] font-bold tracking-[0.08em] uppercase" style={{ color: "var(--t3)" }}>
+                <p className="text-[11px] font-bold tracking-[0.08em] uppercase" style={{ color: "var(--text-muted)" }}>
                   {item.label}
                 </p>
                 <span className="badge-green text-[9px]">{item.status}</span>
               </div>
               <h3 className="text-lg font-bold tracking-tight mb-2">{item.title}</h3>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--t3)" }}>{item.detail}</p>
+              <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>{item.detail}</p>
             </motion.div>
           ))}
         </div>

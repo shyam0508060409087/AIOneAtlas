@@ -12,7 +12,7 @@ import { USER_APPS, TEMPLATES, type UserApp } from "@/lib/data";
 function AppStatusBadge({ status }: { status: string }) {
   const map: Record<string, { text: string; cls: string }> = {
     live:     { text: "● Live",     cls: "bg-[rgba(0,212,177,0.1)] text-[var(--teal)] border border-[rgba(0,212,177,0.2)]" },
-    building: { text: "◎ Building", cls: "bg-[rgba(99,91,255,0.1)] text-[var(--v)] border border-[rgba(99,91,255,0.2)]" },
+    building: { text: "◎ Building", cls: "bg-[rgba(99,91,255,0.1)] text-[var(--accent-primary)] border border-[rgba(99,91,255,0.2)]" },
     draft:    { text: "Draft",      cls: "bg-[rgba(26,31,54,0.8)] text-text-3 border border-[rgba(255,255,255,0.12)]" },
   };
   const cfg = map[status] ?? { text: status, cls: "" };
@@ -82,15 +82,15 @@ export default function DashboardPage() {
         }}
       />
 
-      <div style={{ background: "var(--bg0)" }}>
+      <div style={{ background: "var(--bg-primary)" }}>
 
         {/* ── CONTEXT BAR ── */}
         <div
           className="flex items-center gap-3 px-7 overflow-x-auto scrollbar-none"
           style={{
             height: "40px",
-            background: "var(--bg1)",
-            borderBottom: "1px solid var(--b0)",
+            background: "var(--bg-secondary)",
+            borderBottom: "1px solid var(--border-light)",
             fontSize: "12px",
           }}
         >
@@ -98,12 +98,12 @@ export default function DashboardPage() {
             <span
               key={i}
               className="flex items-center gap-1.5 flex-shrink-0"
-              style={{ color: "var(--t4)" }}
+              style={{ color: "var(--text-muted)" }}
             >
               {item.icon && <span>{item.icon}</span>}
-              <span style={{ color: "var(--t3)" }}>{item.label}</span>
+              <span style={{ color: "var(--text-muted)" }}>{item.label}</span>
               {item.strong && (
-                <strong style={{ color: "var(--t2)", fontWeight: 500 }}>
+                <strong style={{ color: "var(--text-secondary)", fontWeight: 500 }}>
                   {item.strong}
                 </strong>
               )}
@@ -140,7 +140,7 @@ export default function DashboardPage() {
             <h2 className="text-2xl font-bold tracking-tight mb-1.5">
               Good morning, Shyam 👋
             </h2>
-            <p className="text-sm" style={{ color: "var(--t3)" }}>
+            <p className="text-sm" style={{ color: "var(--text-muted)" }}>
               2 apps live · 1 building · What are we building today?
             </p>
           </motion.div>
@@ -189,7 +189,7 @@ export default function DashboardPage() {
               <motion.div
                 key={app.id}
                 className="relative rounded-xl p-[18px] cursor-pointer overflow-hidden"
-                style={{ background: "var(--bg2)", border: "1px solid var(--b1)" }}
+                style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)" }}
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.14 + i * 0.07, ease: [0.16, 1, 0.3, 1] }}
@@ -218,12 +218,12 @@ export default function DashboardPage() {
                 </div>
 
                 <p className="text-sm font-semibold mb-1 relative">{app.name}</p>
-                <p className="text-xs mb-3.5 leading-snug relative" style={{ color: "var(--t3)" }}>
+                <p className="text-xs mb-3.5 leading-snug relative" style={{ color: "var(--text-muted)" }}>
                   {app.description}
                 </p>
                 <div
                   className="flex items-center justify-between text-[11px] relative"
-                  style={{ color: "var(--t4)" }}
+                  style={{ color: "var(--text-muted)" }}
                 >
                   <span>{app.updatedAt}</span>
                   <span>{app.userCount !== null ? `${app.userCount} users` : "—"}</span>
@@ -248,8 +248,8 @@ export default function DashboardPage() {
                 toast("✨", "New workspace opened!");
               }}
             >
-              <span className="text-2xl" style={{ color: "var(--t4)" }}>＋</span>
-              <span className="text-xs font-medium" style={{ color: "var(--t4)" }}>New App</span>
+              <span className="text-2xl" style={{ color: "var(--text-muted)" }}>＋</span>
+              <span className="text-xs font-medium" style={{ color: "var(--text-muted)" }}>New App</span>
             </motion.div>
           </div>
 
@@ -270,7 +270,7 @@ export default function DashboardPage() {
               <motion.div
                 key={t.id}
                 className="flex-shrink-0 w-[200px] rounded-xl p-4 cursor-pointer"
-                style={{ background: "var(--bg2)", border: "1px solid var(--b1)" }}
+                style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)" }}
                 whileHover={{ y: -3, boxShadow: "0 8px 32px rgba(0,0,0,0.4)" }}
                 onClick={() => router.push("/templates")}
               >
@@ -281,7 +281,7 @@ export default function DashboardPage() {
                   {t.emoji}
                 </div>
                 <p className="text-sm font-semibold mb-0.5">{t.name}</p>
-                <p className="text-[11px] mb-2.5" style={{ color: "var(--t4)" }}>
+                <p className="text-[11px] mb-2.5" style={{ color: "var(--text-muted)" }}>
                   {t.usersBuilt} apps built
                 </p>
                 <span

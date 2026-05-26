@@ -67,10 +67,10 @@ const TRENDING = [
 ];
 
 const PROOF_AVATARS = [
-  { letter: "A", gradient: "linear-gradient(135deg,var(--v),var(--v2))" },
+  { letter: "A", gradient: "linear-gradient(135deg,var(--accent-primary),var(--v2))" },
   { letter: "B", gradient: "linear-gradient(135deg,var(--teal),var(--sky))" },
   { letter: "C", gradient: "linear-gradient(135deg,var(--orange),var(--amber))" },
-  { letter: "D", gradient: "linear-gradient(135deg,var(--rose),var(--v))" },
+  { letter: "D", gradient: "linear-gradient(135deg,var(--rose),var(--accent-primary))" },
   { letter: "E", gradient: "linear-gradient(135deg,var(--teal),var(--sky))" },
 ];
 
@@ -106,7 +106,7 @@ export default function HomePage() {
         >
           <span
             className="w-[7px] h-[7px] rounded-full bg-accent"
-            style={{ boxShadow: "0 0 8px var(--v)", animation: "pulseDot 2s ease-in-out infinite" }}
+            style={{ boxShadow: "0 0 8px var(--accent-primary)", animation: "pulseDot 2s ease-in-out infinite" }}
           />
           Now in Beta — 4,200+ builders on the waitlist ↗
         </motion.button>
@@ -126,7 +126,7 @@ export default function HomePage() {
         {/* Sub */}
         <motion.p
           className="text-lg max-w-[500px] mb-12 font-normal"
-          style={{ color: "var(--t3)", lineHeight: 1.75 }}
+          style={{ color: "var(--text-muted)", lineHeight: 1.75 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.14, ease: [0.16, 1, 0.3, 1] }}
@@ -152,7 +152,7 @@ export default function HomePage() {
         {/* Social Proof */}
         <motion.div
           className="flex items-center gap-3.5 mt-10 text-sm"
-          style={{ color: "var(--t4)" }}
+          style={{ color: "var(--text-muted)" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.35, duration: 0.5 }}
@@ -164,7 +164,7 @@ export default function HomePage() {
                 className="w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-bold border-2"
                 style={{
                   background: a.gradient,
-                  borderColor: "var(--bg0)",
+                  borderColor: "var(--bg-primary)",
                   marginLeft: i === 0 ? "0" : "-7px",
                 }}
               >
@@ -179,7 +179,7 @@ export default function HomePage() {
         {/* Scroll indicator */}
         <motion.button
           className="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-[11px] cursor-pointer"
-          style={{ color: "var(--t4)", animation: "float 2.5s ease-in-out infinite" }}
+          style={{ color: "var(--text-muted)", animation: "float 2.5s ease-in-out infinite" }}
           onClick={() => document.getElementById("features")?.scrollIntoView({ behavior: "smooth" })}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -205,7 +205,7 @@ export default function HomePage() {
             Everything your app needs,<br />
             <span className="gradient-text-teal">none of the setup</span>
           </h2>
-          <p className="text-lg max-w-[460px]" style={{ color: "var(--t3)", lineHeight: 1.7 }}>
+          <p className="text-lg max-w-[460px]" style={{ color: "var(--text-muted)", lineHeight: 1.7 }}>
             From idea to deployed, production-ready app — in under 60 seconds.
           </p>
         </div>
@@ -216,9 +216,9 @@ export default function HomePage() {
               key={f.title}
               className={`col-span-${f.span} md:col-span-${f.span} col-span-12 rounded-2xl p-8 relative overflow-hidden cursor-default`}
               style={{
-                background: f.cardClass ? `var(--bg2)` : "var(--bg2)",
-                border: `1px solid ${f.borderColor || "var(--b1)"}`,
-                ...(f.cardClass && { background: "linear-gradient(135deg, rgba(99,91,255,0.08), var(--bg2))" }),
+                background: f.cardClass ? `var(--bg-secondary)` : "var(--bg-secondary)",
+                border: `1px solid ${f.borderColor || "var(--border-color)"}`,
+                ...(f.cardClass && { background: "linear-gradient(135deg, rgba(99,91,255,0.08), var(--bg-secondary))" }),
               }}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -226,7 +226,7 @@ export default function HomePage() {
               transition={{ duration: 0.45, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -3, boxShadow: "0 8px 40px rgba(0,0,0,0.45)" }}
             >
-              <p className="text-[10px] font-bold tracking-[0.1em] font-mono mb-4.5" style={{ color: "var(--t4)" }}>
+              <p className="text-[10px] font-bold tracking-[0.1em] font-mono mb-4.5" style={{ color: "var(--text-muted)" }}>
                 {f.num}
               </p>
               <div
@@ -236,7 +236,7 @@ export default function HomePage() {
                 {f.icon}
               </div>
               <h3 className="text-lg font-bold tracking-tight mb-2">{f.title}</h3>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--t3)" }}>{f.desc}</p>
+              <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>{f.desc}</p>
               <div
                 className="mt-4 inline-flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1 rounded-full"
                 style={{
@@ -256,13 +256,13 @@ export default function HomePage() {
       <section className="max-w-[1140px] mx-auto px-6 py-24">
         <div className="mb-14 text-center">
           <h2 className="font-extrabold tracking-tighter mb-3" style={{ fontSize: "clamp(30px, 4.5vw, 52px)" }}>Built for every role</h2>
-          <p className="text-lg max-w-[460px] mx-auto" style={{ color: "var(--t3)" }}>Whether you're a founder, operator, or engineer, OneAtlas adapts to your workflow.</p>
+          <p className="text-lg max-w-[460px] mx-auto" style={{ color: "var(--text-muted)" }}>Whether you're a founder, operator, or engineer, OneAtlas adapts to your workflow.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {[{ role: "Founders", use: "Validate ideas and launch MVPs in 60 seconds without engineering" }, { role: "Product Managers", use: "Build operational dashboards and internal tools instantly" }, { role: "Engineers", use: "Deploy production apps with customizable runtime and APIs" }].map((r) => (
-            <div key={r.role} className="rounded-2xl p-8" style={{ background: "var(--bg2)", border: "1px solid var(--b1)" }}>
+            <div key={r.role} className="rounded-2xl p-8" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)" }}>
               <h3 className="font-bold text-lg mb-2">{r.role}</h3>
-              <p style={{ color: "var(--t3)" }}>{r.use}</p>
+              <p style={{ color: "var(--text-muted)" }}>{r.use}</p>
             </div>
           ))}
         </div>
@@ -282,7 +282,7 @@ export default function HomePage() {
             <motion.div
               key={t.name}
               className="flex-shrink-0 w-[200px] rounded-xl p-4 cursor-pointer transition-all duration-200"
-              style={{ background: "var(--bg2)", border: "1px solid var(--b1)" }}
+              style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)" }}
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -297,7 +297,7 @@ export default function HomePage() {
                 {t.emoji}
               </div>
               <p className="text-sm font-semibold mb-0.5">{t.name}</p>
-              <p className="text-[11px] mb-2.5" style={{ color: "var(--t4)" }}>{t.meta}</p>
+              <p className="text-[11px] mb-2.5" style={{ color: "var(--text-muted)" }}>{t.meta}</p>
               <span className={`badge ${t.badgeClass}`}>{t.badge}</span>
             </motion.div>
           ))}
@@ -305,19 +305,19 @@ export default function HomePage() {
       </section>
 
       {/* ═══ FOOTER ═══ */}
-      <footer className="max-w-[1140px] mx-auto px-7 py-10 flex items-center justify-between flex-wrap gap-4" style={{ borderTop: "1px solid var(--b0)" }}>
+      <footer className="max-w-[1140px] mx-auto px-7 py-10 flex items-center justify-between flex-wrap gap-4" style={{ borderTop: "1px solid var(--border-light)" }}>
         <div className="flex items-center gap-2.5">
-          <div className="w-7 h-7 rounded-[8px] flex items-center justify-center text-sm" style={{ background: "linear-gradient(135deg,var(--v),var(--v2))" }}>🌐</div>
+          <div className="w-7 h-7 rounded-[8px] flex items-center justify-center text-sm" style={{ background: "linear-gradient(135deg,var(--accent-primary),var(--v2))" }}>🌐</div>
           <span className="text-sm font-bold gradient-text">OneAtlas</span>
         </div>
         <div className="flex gap-6 flex-wrap">
           {["Docs", "Roadmap", "Pricing", "Blog", "Changelog"].map((l) => (
-            <Link key={l} href={l === "Roadmap" ? "/roadmap" : "#"} className="text-sm transition-colors hover:text-text-1" style={{ color: "var(--t4)" }}>
+            <Link key={l} href={l === "Roadmap" ? "/roadmap" : "#"} className="text-sm transition-colors hover:text-text-1" style={{ color: "var(--text-muted)" }}>
               {l}
             </Link>
           ))}
         </div>
-        <p className="text-xs" style={{ color: "var(--t4)" }}>© 2026 OneAtlas Inc. · AI-native from day one.</p>
+        <p className="text-xs" style={{ color: "var(--text-muted)" }}>© 2026 OneAtlas Inc. · AI-native from day one.</p>
       </footer>
     </div>
   );

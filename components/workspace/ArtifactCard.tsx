@@ -31,8 +31,8 @@ export default function ArtifactCard({
     <motion.div
       className="artcard mb-4 overflow-hidden rounded-xl"
       style={{
-        background: "var(--bg2)",
-        border: "1px solid var(--b1)",
+        background: "var(--bg-secondary)",
+        border: "1px solid var(--border-color)",
       }}
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export default function ArtifactCard({
       {/* Header */}
       <div
         className="flex items-center justify-between px-4 py-3.5"
-        style={{ borderBottom: "1px solid var(--b0)" }}
+        style={{ borderBottom: "1px solid var(--border-light)" }}
       >
         <div className="flex items-center gap-2 text-[13px] font-semibold">
           {title}
@@ -110,7 +110,7 @@ export function MetricBox({ value, label, change, trend, variant }: MetricBoxPro
       >
         {value}
       </div>
-      <div className="text-[11px]" style={{ color: "var(--t4)" }}>{label}</div>
+      <div className="text-[11px]" style={{ color: "var(--text-muted)" }}>{label}</div>
       <div
         className="text-[10px] mt-[5px] flex items-center gap-[3px] font-medium"
         style={{ color: trend === "up" ? "var(--teal)" : "var(--rose)" }}
@@ -143,7 +143,7 @@ export function MiniChart({ data }: MiniChartProps) {
             className="chart-bar"
             style={{
               height,
-              background: isLast ? "var(--v)" : `rgba(99,91,255,${opacity})`,
+              background: isLast ? "var(--accent-primary)" : `rgba(99,91,255,${opacity})`,
             }}
             initial={{ scaleY: 0, originY: "bottom" }}
             animate={{ scaleY: 1 }}
