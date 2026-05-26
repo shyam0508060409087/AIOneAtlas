@@ -25,7 +25,7 @@ export default function ArtifactCard({
   const badgeStyle =
     badgeVariant === "live"
       ? { bg: "rgba(0,212,177,0.1)", color: "var(--teal)", border: "1px solid rgba(0,212,177,0.2)" }
-      : { bg: "rgba(99,91,255,0.1)", color: "#7A73FF", border: "1px solid rgba(99,91,255,0.2)" };
+      : { bg: "rgba(99,91,255,0.1)", color: "var(--v2)", border: "1px solid rgba(99,91,255,0.2)" };
 
   return (
     <motion.div
@@ -98,8 +98,8 @@ interface MetricBoxProps {
 export function MetricBox({ value, label, change, trend, variant }: MetricBoxProps) {
   const colors = {
     green:  "var(--teal)",
-    violet: "#7A73FF",
-    amber:  "#F8BC42",
+    violet: "var(--v2)",
+    amber:  "var(--amber)",
   };
 
   return (

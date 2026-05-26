@@ -6,14 +6,14 @@ import { ROADMAP_ITEMS, PHASE_CONFIG, type RoadmapPhase } from "@/lib/data";
 const PHASE_ORDER: RoadmapPhase[] = ["0", "1", "1.5", "2", "3+"];
 
 const PRIORITY_STYLES = {
-  P0: { bg: "rgba(255,89,150,0.1)",   color: "#FF5996", border: "1px solid rgba(255,89,150,0.2)" },
-  P1: { bg: "rgba(248,188,66,0.1)",  color: "#F8BC42", border: "1px solid rgba(248,188,66,0.2)" },
-  P2: { bg: "rgba(99,91,255,0.1)", color: "#7A73FF", border: "1px solid rgba(99,91,255,0.2)" },
+  P0: { bg: "rgba(255,89,150,0.1)",   color: "var(--rose)", border: "1px solid rgba(255,89,150,0.2)" },
+  P1: { bg: "rgba(248,188,66,0.1)",  color: "var(--amber)", border: "1px solid rgba(248,188,66,0.2)" },
+  P2: { bg: "rgba(99,91,255,0.1)", color: "var(--v2)", border: "1px solid rgba(99,91,255,0.2)" },
 };
 
 const STATUS_STYLES = {
-  done:     { bg: "rgba(0,212,177,0.1)",   color: "#00D4B1", text: "✓ Done" },
-  building: { bg: "rgba(248,188,66,0.1)",  color: "#F8BC42", text: "⟳ Building" },
+  done:     { bg: "rgba(0,212,177,0.1)",   color: "var(--teal)", text: "✓ Done" },
+  building: { bg: "rgba(248,188,66,0.1)",  color: "var(--amber)", text: "⟳ Building" },
   planned:  { bg: "var(--bg4)",            color: "var(--t4)", text: "📋 Planned" },
 };
 
@@ -42,7 +42,7 @@ export default function RoadmapPage() {
             OneAtlas Build Plan<br />
             <span
               style={{
-                background: "linear-gradient(135deg, #fff 0%, #7A73FF 55%, #635BFF 100%)",
+                background: "linear-gradient(135deg, #fff 0%, var(--v2) 55%, var(--v) 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -57,8 +57,8 @@ export default function RoadmapPage() {
           {/* Stats row */}
           <div className="flex gap-4 mt-6 flex-wrap">
             {[
-              { label: "Done",     count: ROADMAP_ITEMS.filter(r => r.status === "done").length,     color: "#00D4B1" },
-              { label: "Building", count: ROADMAP_ITEMS.filter(r => r.status === "building").length, color: "#F8BC42" },
+              { label: "Done",     count: ROADMAP_ITEMS.filter(r => r.status === "done").length,     color: "var(--teal)" },
+              { label: "Building", count: ROADMAP_ITEMS.filter(r => r.status === "building").length, color: "var(--amber)" },
               { label: "Planned",  count: ROADMAP_ITEMS.filter(r => r.status === "planned").length,  color: "var(--t3)" },
             ].map(({ label, count, color }) => (
               <div

@@ -89,12 +89,12 @@ export default function ProductPage() {
                     style={{
                       background:
                         index === 0
-                          ? "#635BFF"
+                          ? "var(--v)"
                           : index === 1
-                            ? "#00D4B1"
+                            ? "var(--teal)"
                             : index === 2
-                              ? "#FFB17A"
-                              : "#00D4FF",
+                              ? "var(--orange)"
+                              : "var(--sky)",
                       color: index === 2 ? "#0A2540" : "#fff",
                     }}
                   >

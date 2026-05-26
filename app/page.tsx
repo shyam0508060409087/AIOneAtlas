@@ -67,11 +67,11 @@ const TRENDING = [
 ];
 
 const PROOF_AVATARS = [
-  { letter: "A", gradient: "linear-gradient(135deg,#635BFF,#7A73FF)" },
-  { letter: "B", gradient: "linear-gradient(135deg,#00D4B1,#00D4FF)" },
-  { letter: "C", gradient: "linear-gradient(135deg,var(--orange),#F8BC42)" },
-  { letter: "D", gradient: "linear-gradient(135deg,#FF5996,#635BFF)" },
-  { letter: "E", gradient: "linear-gradient(135deg,#00D4B1,#00D4FF)" },
+  { letter: "A", gradient: "linear-gradient(135deg,var(--v),var(--v2))" },
+  { letter: "B", gradient: "linear-gradient(135deg,var(--teal),var(--sky))" },
+  { letter: "C", gradient: "linear-gradient(135deg,var(--orange),var(--amber))" },
+  { letter: "D", gradient: "linear-gradient(135deg,var(--rose),var(--v))" },
+  { letter: "E", gradient: "linear-gradient(135deg,var(--teal),var(--sky))" },
 ];
 
 // ── PAGE ─────────────────────────────────────
@@ -172,7 +172,7 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <span style={{ color: "#F8BC42", letterSpacing: "-1px" }}>★★★★★</span>
+          <span style={{ color: "var(--amber)", letterSpacing: "-1px" }}>★★★★★</span>
           <span>Loved by 4,200+ builders worldwide</span>
         </motion.div>
 
@@ -242,7 +242,7 @@ export default function HomePage() {
                 style={{
                   background: "rgba(0,212,177,0.08)",
                   border: "1px solid rgba(0,212,177,0.15)",
-                  color: "#00D4B1",
+                  color: "var(--teal)",
                 }}
               >
                 {f.kpi}
@@ -307,7 +307,7 @@ export default function HomePage() {
       {/* ═══ FOOTER ═══ */}
       <footer className="max-w-[1140px] mx-auto px-7 py-10 flex items-center justify-between flex-wrap gap-4" style={{ borderTop: "1px solid var(--b0)" }}>
         <div className="flex items-center gap-2.5">
-          <div className="w-7 h-7 rounded-[8px] flex items-center justify-center text-sm" style={{ background: "linear-gradient(135deg,#635BFF,#7A73FF)" }}>🌐</div>
+          <div className="w-7 h-7 rounded-[8px] flex items-center justify-center text-sm" style={{ background: "linear-gradient(135deg,var(--v),var(--v2))" }}>🌐</div>
           <span className="text-sm font-bold gradient-text">OneAtlas</span>
         </div>
         <div className="flex gap-6 flex-wrap">

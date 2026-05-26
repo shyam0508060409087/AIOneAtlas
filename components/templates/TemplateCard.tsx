@@ -101,10 +101,10 @@ export default function TemplateCard({
             style={{
               background: "var(--bg3)",
               border: "1px solid var(--b1)",
-              color: saved ? "#F8BC42" : "var(--t4)",
+              color: saved ? "var(--amber)" : "var(--t4)",
             }}
             whileHover={{
-              color: "#F8BC42",
+              color: "var(--amber)",
               borderColor: "rgba(248,188,66,0.3)",
             }}
             whileTap={{ scale: 0.9 }}

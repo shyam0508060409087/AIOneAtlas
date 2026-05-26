@@ -12,7 +12,7 @@ import { USER_APPS, TEMPLATES, type UserApp } from "@/lib/data";
 function AppStatusBadge({ status }: { status: string }) {
   const map: Record<string, { text: string; cls: string }> = {
     live:     { text: "● Live",     cls: "bg-[rgba(0,212,177,0.1)] text-[var(--teal)] border border-[rgba(0,212,177,0.2)]" },
-    building: { text: "◎ Building", cls: "bg-[rgba(99,91,255,0.1)] text-[#635BFF] border border-[rgba(99,91,255,0.2)]" },
+    building: { text: "◎ Building", cls: "bg-[rgba(99,91,255,0.1)] text-[var(--v)] border border-[rgba(99,91,255,0.2)]" },
     draft:    { text: "Draft",      cls: "bg-[rgba(26,31,54,0.8)] text-text-3 border border-[rgba(255,255,255,0.12)]" },
   };
   const cfg = map[status] ?? { text: status, cls: "" };
@@ -168,7 +168,7 @@ export default function DashboardPage() {
                 className="text-[9px] font-bold px-2 py-[2px] rounded-full"
                 style={{
                   background: "rgba(99,91,255,0.12)",
-                  color: "#7A73FF",
+                  color: "var(--v2)",
                   border: "1px solid rgba(99,91,255,0.2)",
                 }}
               >
@@ -177,7 +177,7 @@ export default function DashboardPage() {
             </h3>
             <button
               className="text-xs transition-colors"
-              style={{ color: "#7A73FF" }}
+              style={{ color: "var(--v2)" }}
               onClick={() => router.push("/workspace")}
             >
               Manage all →
@@ -258,7 +258,7 @@ export default function DashboardPage() {
             <h3 className="text-sm font-bold">🔥 Trending Templates</h3>
             <button
               className="text-xs transition-colors"
-              style={{ color: "#7A73FF" }}
+              style={{ color: "var(--v2)" }}
               onClick={() => router.push("/templates")}
             >
               Browse all →
@@ -288,7 +288,7 @@ export default function DashboardPage() {
                   className="text-[10px] font-semibold px-2.5 py-[3px] rounded-full"
                   style={{
                     background: "rgba(99,91,255,0.1)",
-                    color: "#7A73FF",
+                    color: "var(--v2)",
                     border: "1px solid rgba(99,91,255,0.2)",
                   }}
                 >

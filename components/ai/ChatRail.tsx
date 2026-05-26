@@ -125,7 +125,7 @@ export default function ChatRail() {
       >
         <div
           className="w-[22px] h-[22px] rounded-[5px] flex items-center justify-center text-[10px] flex-shrink-0"
-          style={{ background: "linear-gradient(135deg, #635BFF, #7A73FF)" }}
+          style={{ background: "linear-gradient(135deg, var(--v), var(--v2))" }}
         >
           🌐
         </div>
@@ -134,7 +134,7 @@ export default function ChatRail() {
           <span
             className="w-1.5 h-1.5 rounded-full bg-green"
             style={{
-              boxShadow: "0 0 6px #00D4B1",
+              boxShadow: "0 0 6px var(--teal)",
               animation: "pulseDot 2s ease-in-out infinite",
             }}
           />
@@ -159,7 +159,7 @@ export default function ChatRail() {
                   <div className="flex items-center gap-1.5 mb-1.5">
                     <div
                       className="w-[18px] h-[18px] rounded-[4px] flex items-center justify-center text-[9px]"
-                      style={{ background: "linear-gradient(135deg, #635BFF, #7A73FF)" }}
+                      style={{ background: "linear-gradient(135deg, var(--v), var(--v2))" }}
                     >
                       🌐
                     </div>

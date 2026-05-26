@@ -79,7 +79,7 @@ export default function PricingPage() {
               {tier.highlighted && (
                 <div
                   className="absolute top-0 right-0 px-3 py-1 text-xs font-bold rounded-bl-lg"
-                  style={{ background: "rgba(99,91,255,0.2)", color: "#7A73FF" }}
+                  style={{ background: "rgba(99,91,255,0.2)", color: "var(--v2)" }}
                 >
                   Most Popular
                 </div>

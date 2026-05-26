@@ -24,8 +24,8 @@ const DEFAULT_STEPS: AIStep[] = [
 ];
 
 const STEP_DOT = {
-  done:    { bg: "rgba(0,212,177,0.12)",   color: "#00D4B1", icon: "✓" },
-  active:  { bg: "rgba(99,91,255,0.12)", color: "#7A73FF", icon: "⟳" },
+  done:    { bg: "rgba(0,212,177,0.12)",   color: "var(--teal)", icon: "✓" },
+  active:  { bg: "rgba(99,91,255,0.12)", color: "var(--v2)", icon: "⟳" },
   waiting: { bg: "var(--bg4)",             color: "var(--t4)", icon: "○" },
 };
 
@@ -82,7 +82,7 @@ export default function AIProgressCard({
       <div className="flex items-center gap-2.5 mb-4 text-sm font-semibold">
         <div
           className="w-7 h-7 rounded-[7px] flex items-center justify-center text-sm flex-shrink-0"
-          style={{ background: "linear-gradient(135deg, #635BFF, #7A73FF)" }}
+          style={{ background: "linear-gradient(135deg, var(--v), var(--v2))" }}
         >
           🌐
         </div>

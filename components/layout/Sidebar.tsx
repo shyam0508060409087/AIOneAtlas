@@ -61,9 +61,9 @@ const TEMPLATE_SIDEBAR: SidebarItem[] = [
 // ── BADGE STYLES ─────────────────────────────────────────────────
 
 const BADGE_STYLES: Record<"live" | "new" | "building", string> = {
-  live:     "bg-[rgba(0,212,177,0.1)]   text-[#00D4B1]  border border-[rgba(0,212,177,0.2)]",
-  new:      "bg-[rgba(248,188,66,0.1)]  text-[#F8BC42]  border border-[rgba(248,188,66,0.2)]",
-  building: "bg-[rgba(99,91,255,0.1)] text-[#635BFF] border border-[rgba(99,91,255,0.2)]",
+  live:     "bg-[rgba(0,212,177,0.1)]   text-[var(--teal)]  border border-[rgba(0,212,177,0.2)]",
+  new:      "bg-[rgba(248,188,66,0.1)]  text-[var(--amber)]  border border-[rgba(248,188,66,0.2)]",
+  building: "bg-[rgba(99,91,255,0.1)] text-[var(--v)] border border-[rgba(99,91,255,0.2)]",
 };
 
 // ── COMPONENT ────────────────────────────────────────────────────
@@ -127,7 +127,7 @@ export default function Sidebar({ variant = "dashboard", newAppClick }: SidebarP
         const inner = (
           <motion.div
             className={`flex items-center gap-2 w-full px-2.5 py-[7px] rounded-md text-xs cursor-pointer mb-0.5 transition-colors ${
-              isActive ? "text-[#635BFF]" : "text-text-3 hover:text-text-1"
+              isActive ? "text-[var(--v)]" : "text-text-3 hover:text-text-1"
             }`}
             style={isActive ? { background: "rgba(99,91,255,0.09)" } : {}}
             whileTap={{ scale: 0.98 }}
