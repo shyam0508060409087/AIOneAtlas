@@ -61,17 +61,19 @@ export default function PromptInput({
       {/* ── PROMPT BOX ── */}
       <motion.div
         className="prompt-box"
-        animate={focused ? { scale: 1 } : { scale: 1 }}
+        animate={focused ? { y: -2 } : { y: 0 }}
+        transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
         style={{
-          borderColor: focused ? "rgba(255,102,0,0.4)" : undefined,
+          borderColor: focused ? "rgba(255,102,0,0.45)" : undefined,
+          transformOrigin: "center",
           boxShadow: focused
-            ? "0 8px 48px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,102,0,0.3), 0 0 40px rgba(255,102,0,0.12), 0 0 0 4px rgba(255,102,0,0.06)"
+            ? "0 18px 54px rgba(0,0,0,0.10), 0 0 0 1px rgba(255,102,0,0.28), 0 18px 50px rgba(255,102,0,0.08)"
             : undefined,
         }}
       >
         <textarea
           ref={textareaRef}
-          className="prompt-textarea"
+          className="prompt-textarea w-full resize-none bg-transparent text-[15px] leading-7 text-[var(--text-primary)] placeholder:text-[var(--text-muted)] outline-none"
           placeholder={placeholder}
           value={value}
           onChange={handleChange}
@@ -79,13 +81,13 @@ export default function PromptInput({
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
           rows={isHero ? 3 : 2}
-          style={{ minHeight: isHero ? "78px" : "52px" }}
+          style={{ minHeight: isHero ? "78px" : "52px", transition: "height 160ms ease" }}
         />
 
         {/* ── ACTION BAR ── */}
         <div
           className="flex items-center justify-between mt-3 pt-3"
-          style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}
+          style={{ borderTop: "1px solid rgba(17,17,17,0.06)" }}
         >
           <div className="flex items-center gap-1.5">
             {/* Attach */}
