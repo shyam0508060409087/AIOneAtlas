@@ -95,7 +95,7 @@ export default function ProductPage() {
                             : index === 2
                               ? "var(--orange)"
                               : "var(--sky)",
-                      color: index === 2 ? "#0A2540" : "#fff",
+                      color: index === 2 ? "var(--text-primary)" : "#fff",
                     }}
                   >
                     {index + 1}
