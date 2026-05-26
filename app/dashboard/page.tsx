@@ -11,7 +11,7 @@ import { USER_APPS, TEMPLATES, type UserApp } from "@/lib/data";
 
 function AppStatusBadge({ status }: { status: string }) {
   const map: Record<string, { text: string; cls: string }> = {
-    live:     { text: "● Live",     cls: "bg-[rgba(0,212,177,0.1)] text-[#00D4B1] border border-[rgba(0,212,177,0.2)]" },
+    live:     { text: "● Live",     cls: "bg-[rgba(0,212,177,0.1)] text-[var(--teal)] border border-[rgba(0,212,177,0.2)]" },
     building: { text: "◎ Building", cls: "bg-[rgba(99,91,255,0.1)] text-[#635BFF] border border-[rgba(99,91,255,0.2)]" },
     draft:    { text: "Draft",      cls: "bg-[rgba(26,31,54,0.8)] text-text-3 border border-[rgba(255,255,255,0.12)]" },
   };
@@ -113,13 +113,13 @@ export default function DashboardPage() {
           {/* AI status pill */}
           <div
             className="ml-auto flex items-center gap-1.5 text-[11px] flex-shrink-0"
-            style={{ color: "#00D4B1" }}
+            style={{ color: "var(--teal)" }}
           >
             <span
               className="w-1.5 h-1.5 rounded-full inline-block"
               style={{
-                background: "#00D4B1",
-                boxShadow: "0 0 6px #00D4B1",
+                background: "var(--teal)",
+                boxShadow: "0 0 6px var(--teal)",
                 animation: "pulseDot 2s ease-in-out infinite",
               }}
             />

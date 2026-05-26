@@ -97,7 +97,7 @@ export default function SecurityPage() {
               </div>
               <span
                 className="text-2xl"
-                style={{ color: c.status === "Certified" || c.status === "Compliant" ? "#00D4B1" : "#F8BC42" }}
+                style={{ color: c.status === "Certified" || c.status === "Compliant" ? "var(--teal)" : "var(--amber)" }}
               >
                 {c.icon}
               </span>

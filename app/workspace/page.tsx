@@ -112,7 +112,7 @@ export default function WorkspacePage() {
             </motion.button>
             <motion.button
               className="text-[11px] font-semibold px-3 py-1.5 rounded-md"
-              style={{ background: "#00D4B1", color: "#000" }}
+              style={{ background: "var(--teal)", color: "#000" }}
               whileHover={{ opacity: 0.9, y: -1 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => toast("🚀", "Deploying to Cloudflare edge...")}
@@ -197,7 +197,7 @@ export default function WorkspacePage() {
           <span>Last modified: 2 hours ago</span>
           <div className="flex items-center gap-3">
             <span>Schema v3</span>
-            <div className="w-2 h-2 rounded-full" style={{ background: "#00D4B1", boxShadow: "0 0 6px #00D4B1" }} />
+            <div className="w-2 h-2 rounded-full" style={{ background: "var(--teal)", boxShadow: "0 0 6px var(--teal)" }} />
             <span>Connected</span>
           </div>
         </div>

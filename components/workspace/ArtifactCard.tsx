@@ -24,7 +24,7 @@ export default function ArtifactCard({
 }: ArtifactCardProps) {
   const badgeStyle =
     badgeVariant === "live"
-      ? { bg: "rgba(0,212,177,0.1)", color: "#00D4B1", border: "1px solid rgba(0,212,177,0.2)" }
+      ? { bg: "rgba(0,212,177,0.1)", color: "var(--teal)", border: "1px solid rgba(0,212,177,0.2)" }
       : { bg: "rgba(99,91,255,0.1)", color: "#7A73FF", border: "1px solid rgba(99,91,255,0.2)" };
 
   return (
@@ -97,7 +97,7 @@ interface MetricBoxProps {
 
 export function MetricBox({ value, label, change, trend, variant }: MetricBoxProps) {
   const colors = {
-    green:  "#00D4B1",
+    green:  "var(--teal)",
     violet: "#7A73FF",
     amber:  "#F8BC42",
   };
@@ -113,7 +113,7 @@ export function MetricBox({ value, label, change, trend, variant }: MetricBoxPro
       <div className="text-[11px]" style={{ color: "var(--t4)" }}>{label}</div>
       <div
         className="text-[10px] mt-[5px] flex items-center gap-[3px] font-medium"
-        style={{ color: trend === "up" ? "#00D4B1" : "#FF5996" }}
+        style={{ color: trend === "up" ? "var(--teal)" : "var(--rose)" }}
       >
         {trend === "up" ? "↑" : "↓"} {change}
       </div>

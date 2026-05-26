@@ -23,6 +23,15 @@
   --v2: #7A73FF;
   --v3: #7A73FF;
   --vg: rgba(99,91,255,0.18);
+  --teal: #00D4B1;
+  --rose: #FF5996;
+  --amber: #F8BC42;
+  --orange: #FFB17A;
+  --sky: #00D4FF;
+  --teal-glow: rgba(0,212,177,0.18);
+  --rose-glow: rgba(255,89,150,0.18);
+  --amber-glow: rgba(248,188,66,0.18);
+  --sky-glow: rgba(0,212,255,0.18);
 
   --t1: #EEEEF8;
   --t2: #9494B4;

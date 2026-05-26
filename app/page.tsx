@@ -69,7 +69,7 @@ const TRENDING = [
 const PROOF_AVATARS = [
   { letter: "A", gradient: "linear-gradient(135deg,#635BFF,#7A73FF)" },
   { letter: "B", gradient: "linear-gradient(135deg,#00D4B1,#00D4FF)" },
-  { letter: "C", gradient: "linear-gradient(135deg,#FFB17A,#F8BC42)" },
+  { letter: "C", gradient: "linear-gradient(135deg,var(--orange),#F8BC42)" },
   { letter: "D", gradient: "linear-gradient(135deg,#FF5996,#635BFF)" },
   { letter: "E", gradient: "linear-gradient(135deg,#00D4B1,#00D4FF)" },
 ];

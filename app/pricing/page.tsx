@@ -105,7 +105,7 @@ export default function PricingPage() {
               <div className="space-y-3">
                 {tier.features.map((f) => (
                   <div key={f} className="flex items-start gap-2.5 text-sm">
-                    <span style={{ color: "#00D4B1" }}>✓</span>
+                    <span style={{ color: "var(--teal)" }}>✓</span>
                     <span style={{ color: "var(--t2)" }}>{f}</span>
                   </div>
                 ))}
