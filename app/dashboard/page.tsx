@@ -11,8 +11,8 @@ import { USER_APPS, TEMPLATES, type UserApp } from "@/lib/data";
 
 function AppStatusBadge({ status }: { status: string }) {
   const map: Record<string, { text: string; cls: string }> = {
-    live:     { text: "● Live",     cls: "bg-[rgba(0,212,177,0.1)] text-[var(--teal)] border border-[rgba(0,212,177,0.2)]" },
-    building: { text: "◎ Building", cls: "bg-[rgba(99,91,255,0.1)] text-[var(--accent-primary)] border border-[rgba(99,91,255,0.2)]" },
+    live:     { text: "● Live",     cls: "bg-[rgba(255,102,0,0.1)] text-[var(--accent-primary)] border border-[rgba(255,102,0,0.2)]" },
+    building: { text: "◎ Building", cls: "bg-[rgba(255,102,0,0.1)] text-[var(--accent-primary)] border border-[rgba(255,102,0,0.2)]" },
     draft:    { text: "Draft",      cls: "bg-[rgba(26,31,54,0.8)] text-text-3 border border-[rgba(255,255,255,0.12)]" },
   };
   const cfg = map[status] ?? { text: status, cls: "" };
@@ -26,17 +26,17 @@ function AppStatusBadge({ status }: { status: string }) {
 // ── ACCENT GLOW MAP ───────────────────────────────────────────────
 
 const ACCENT_GLOWS: Record<UserApp["accentVariant"], string> = {
-  teal:   "rgba(0,212,177,0.05)",
-  violet: "rgba(99,91,255,0.07)",
-  amber:  "rgba(248,188,66,0.05)",
-  rose:   "rgba(255,89,150,0.05)",
+  teal:   "rgba(255,102,0,0.05)",
+  violet: "rgba(255,102,0,0.07)",
+  amber:  "rgba(255,102,0,0.05)",
+  rose:   "rgba(255,102,0,0.05)",
 };
 
 const ACCENT_ICON_BG: Record<UserApp["accentVariant"], string> = {
-  teal:   "rgba(0,212,177,0.12)",
-  violet: "rgba(99,91,255,0.12)",
-  amber:  "rgba(248,188,66,0.12)",
-  rose:   "rgba(255,89,150,0.12)",
+  teal:   "rgba(255,102,0,0.12)",
+  violet: "rgba(255,102,0,0.12)",
+  amber:  "rgba(255,102,0,0.12)",
+  rose:   "rgba(255,102,0,0.12)",
 };
 
 // ── CONTEXT BAR DATA ──────────────────────────────────────────────
@@ -113,13 +113,13 @@ export default function DashboardPage() {
           {/* AI status pill */}
           <div
             className="ml-auto flex items-center gap-1.5 text-[11px] flex-shrink-0"
-            style={{ color: "var(--teal)" }}
+            style={{ color: "var(--accent-primary)" }}
           >
             <span
               className="w-1.5 h-1.5 rounded-full inline-block"
               style={{
-                background: "var(--teal)",
-                boxShadow: "0 0 6px var(--teal)",
+                background: "var(--accent-primary)",
+                boxShadow: "0 0 6px var(--accent-primary)",
                 animation: "pulseDot 2s ease-in-out infinite",
               }}
             />
@@ -167,9 +167,9 @@ export default function DashboardPage() {
               <span
                 className="text-[9px] font-bold px-2 py-[2px] rounded-full"
                 style={{
-                  background: "rgba(99,91,255,0.12)",
-                  color: "var(--v2)",
-                  border: "1px solid rgba(99,91,255,0.2)",
+                  background: "rgba(255,102,0,0.12)",
+                  color: "var(--accent-primary)",
+                  border: "1px solid rgba(255,102,0,0.2)",
                 }}
               >
                 3
@@ -177,7 +177,7 @@ export default function DashboardPage() {
             </h3>
             <button
               className="text-xs transition-colors"
-              style={{ color: "var(--v2)" }}
+              style={{ color: "var(--accent-primary)" }}
               onClick={() => router.push("/workspace")}
             >
               Manage all →
@@ -203,7 +203,7 @@ export default function DashboardPage() {
                 <div
                   className="absolute inset-0 pointer-events-none"
                   style={{
-                    background: `linear-gradient(135deg, ${ACCENT_GLOWS[app.accentVariant]}, transparent 60%)`,
+                    background: `none`,
                   }}
                 />
 
@@ -234,13 +234,13 @@ export default function DashboardPage() {
             {/* New App Card */}
             <motion.div
               className="rounded-xl cursor-pointer flex flex-col items-center justify-center min-h-[152px] gap-2"
-              style={{ border: "1px dashed rgba(99,91,255,0.18)" }}
+              style={{ border: "1px dashed rgba(255,102,0,0.18)" }}
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{
-                borderColor: "rgba(99,91,255,0.4)",
-                backgroundColor: "rgba(99,91,255,0.04)",
+                borderColor: "rgba(255,102,0,0.4)",
+                backgroundColor: "rgba(255,102,0,0.04)",
               }}
               whileTap={{ scale: 0.98 }}
               onClick={() => {
@@ -258,7 +258,7 @@ export default function DashboardPage() {
             <h3 className="text-sm font-bold">🔥 Trending Templates</h3>
             <button
               className="text-xs transition-colors"
-              style={{ color: "var(--v2)" }}
+              style={{ color: "var(--accent-primary)" }}
               onClick={() => router.push("/templates")}
             >
               Browse all →
@@ -287,9 +287,9 @@ export default function DashboardPage() {
                 <span
                   className="text-[10px] font-semibold px-2.5 py-[3px] rounded-full"
                   style={{
-                    background: "rgba(99,91,255,0.1)",
-                    color: "var(--v2)",
-                    border: "1px solid rgba(99,91,255,0.2)",
+                    background: "rgba(255,102,0,0.1)",
+                    color: "var(--accent-primary)",
+                    border: "1px solid rgba(255,102,0,0.2)",
                   }}
                 >
                   {t.tags[0]}

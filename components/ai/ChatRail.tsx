@@ -125,7 +125,7 @@ export default function ChatRail() {
       >
         <div
           className="w-[22px] h-[22px] rounded-[5px] flex items-center justify-center text-[10px] flex-shrink-0"
-          style={{ background: "linear-gradient(135deg, var(--accent-primary), var(--v2))" }}
+          style={{ background: "none, var(--accent-primary))" }}
         >
           🌐
         </div>
@@ -134,7 +134,7 @@ export default function ChatRail() {
           <span
             className="w-1.5 h-1.5 rounded-full bg-green"
             style={{
-              boxShadow: "0 0 6px var(--teal)",
+              boxShadow: "0 0 6px var(--accent-primary)",
               animation: "pulseDot 2s ease-in-out infinite",
             }}
           />
@@ -159,7 +159,7 @@ export default function ChatRail() {
                   <div className="flex items-center gap-1.5 mb-1.5">
                     <div
                       className="w-[18px] h-[18px] rounded-[4px] flex items-center justify-center text-[9px]"
-                      style={{ background: "linear-gradient(135deg, var(--accent-primary), var(--v2))" }}
+                      style={{ background: "none, var(--accent-primary))" }}
                     >
                       🌐
                     </div>
@@ -191,7 +191,7 @@ export default function ChatRail() {
                   key={i}
                   className="w-1.5 h-1.5 rounded-full"
                   style={{
-                    background: "var(--v2)",
+                    background: "var(--accent-primary)",
                     animation: `pulseDot 1.2s ease-in-out ${i * 0.2}s infinite`,
                   }}
                 />
@@ -213,8 +213,8 @@ export default function ChatRail() {
           }}
           onFocus={(e) => {
             const el = e.currentTarget;
-            el.style.borderColor = "rgba(99,91,255,0.35)";
-            el.style.boxShadow = "0 0 0 3px rgba(99,91,255,0.06)";
+            el.style.borderColor = "rgba(255,102,0,0.35)";
+            el.style.boxShadow = "0 0 0 3px rgba(255,102,0,0.06)";
           }}
           onBlur={(e) => {
             const el = e.currentTarget;
@@ -240,7 +240,7 @@ export default function ChatRail() {
             className="w-7 h-7 rounded-md flex items-center justify-center flex-shrink-0 text-[13px] text-white"
             style={{ background: "var(--accent-primary)" }}
             onClick={send}
-            whileHover={{ background: "var(--v2)", scale: 1.05 }}
+            whileHover={{ background: "var(--accent-primary)", scale: 1.05 }}
             whileTap={{ scale: 0.94 }}
           >
             ↑

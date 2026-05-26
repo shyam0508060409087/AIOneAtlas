@@ -67,8 +67,8 @@ export default function PricingPage() {
               key={tier.name}
               className="rounded-2xl p-8 relative overflow-hidden"
               style={{
-                background: tier.highlighted ? "linear-gradient(135deg, rgba(99,91,255,0.1), var(--bg-secondary))" : "var(--bg-secondary)",
-                border: tier.highlighted ? "2px solid rgba(99,91,255,0.3)" : "1px solid var(--border-color)",
+                background: tier.highlighted ? "none, var(--bg-secondary))" : "var(--bg-secondary)",
+                border: tier.highlighted ? "2px solid rgba(255,102,0,0.3)" : "1px solid var(--border-color)",
               }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ export default function PricingPage() {
               {tier.highlighted && (
                 <div
                   className="absolute top-0 right-0 px-3 py-1 text-xs font-bold rounded-bl-lg"
-                  style={{ background: "rgba(99,91,255,0.2)", color: "var(--v2)" }}
+                  style={{ background: "rgba(255,102,0,0.2)", color: "var(--accent-primary)" }}
                 >
                   Most Popular
                 </div>
@@ -105,7 +105,7 @@ export default function PricingPage() {
               <div className="space-y-3">
                 {tier.features.map((f) => (
                   <div key={f} className="flex items-start gap-2.5 text-sm">
-                    <span style={{ color: "var(--teal)" }}>✓</span>
+                    <span style={{ color: "var(--accent-primary)" }}>✓</span>
                     <span style={{ color: "var(--text-secondary)" }}>{f}</span>
                   </div>
                 ))}

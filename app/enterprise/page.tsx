@@ -109,7 +109,7 @@ export default function EnterprisePage() {
                       style={{
                         textAlign: j === 0 ? "left" : "center",
                         color: i === 0 ? "var(--text-primary)" : "var(--text-secondary)",
-                        background: j === 3 && i > 0 ? "rgba(99,91,255,0.08)" : "transparent",
+                        background: j === 3 && i > 0 ? "rgba(255,102,0,0.08)" : "transparent",
                       }}
                     >
                       {cell}

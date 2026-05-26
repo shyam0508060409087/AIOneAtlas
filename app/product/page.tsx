@@ -91,7 +91,7 @@ export default function ProductPage() {
                         index === 0
                           ? "var(--accent-primary)"
                           : index === 1
-                            ? "var(--teal)"
+                            ? "var(--accent-primary)"
                             : index === 2
                               ? "var(--orange)"
                               : "var(--sky)",

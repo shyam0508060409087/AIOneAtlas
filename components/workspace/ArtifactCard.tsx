@@ -24,8 +24,8 @@ export default function ArtifactCard({
 }: ArtifactCardProps) {
   const badgeStyle =
     badgeVariant === "live"
-      ? { bg: "rgba(0,212,177,0.1)", color: "var(--teal)", border: "1px solid rgba(0,212,177,0.2)" }
-      : { bg: "rgba(99,91,255,0.1)", color: "var(--v2)", border: "1px solid rgba(99,91,255,0.2)" };
+      ? { bg: "rgba(255,102,0,0.1)", color: "var(--accent-primary)", border: "1px solid rgba(255,102,0,0.2)" }
+      : { bg: "rgba(255,102,0,0.1)", color: "var(--accent-primary)", border: "1px solid rgba(255,102,0,0.2)" };
 
   return (
     <motion.div
@@ -97,9 +97,9 @@ interface MetricBoxProps {
 
 export function MetricBox({ value, label, change, trend, variant }: MetricBoxProps) {
   const colors = {
-    green:  "var(--teal)",
-    violet: "var(--v2)",
-    amber:  "var(--amber)",
+    green:  "var(--accent-primary)",
+    violet: "var(--accent-primary)",
+    amber:  "var(--accent-primary)",
   };
 
   return (
@@ -113,7 +113,7 @@ export function MetricBox({ value, label, change, trend, variant }: MetricBoxPro
       <div className="text-[11px]" style={{ color: "var(--text-muted)" }}>{label}</div>
       <div
         className="text-[10px] mt-[5px] flex items-center gap-[3px] font-medium"
-        style={{ color: trend === "up" ? "var(--teal)" : "var(--rose)" }}
+        style={{ color: trend === "up" ? "var(--accent-primary)" : "var(--accent-primary)" }}
       >
         {trend === "up" ? "↑" : "↓"} {change}
       </div>
@@ -143,7 +143,7 @@ export function MiniChart({ data }: MiniChartProps) {
             className="chart-bar"
             style={{
               height,
-              background: isLast ? "var(--accent-primary)" : `rgba(99,91,255,${opacity})`,
+              background: isLast ? "var(--accent-primary)" : `rgba(255,102,0,${opacity})`,
             }}
             initial={{ scaleY: 0, originY: "bottom" }}
             animate={{ scaleY: 1 }}

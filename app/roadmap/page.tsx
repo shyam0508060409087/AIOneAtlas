@@ -6,15 +6,15 @@ import { ROADMAP_ITEMS, PHASE_CONFIG, type RoadmapPhase } from "@/lib/data";
 const PHASE_ORDER: RoadmapPhase[] = ["0", "1", "1.5", "2", "3+"];
 
 const PRIORITY_STYLES = {
-  P0: { bg: "rgba(255,89,150,0.1)",   color: "var(--rose)", border: "1px solid rgba(255,89,150,0.2)" },
-  P1: { bg: "rgba(248,188,66,0.1)",  color: "var(--amber)", border: "1px solid rgba(248,188,66,0.2)" },
-  P2: { bg: "rgba(99,91,255,0.1)", color: "var(--v2)", border: "1px solid rgba(99,91,255,0.2)" },
+  P0: { bg: "rgba(255,102,0,0.1)",   color: "var(--accent-primary)", border: "1px solid rgba(255,102,0,0.2)" },
+  P1: { bg: "rgba(255,102,0,0.1)",  color: "var(--accent-primary)", border: "1px solid rgba(255,102,0,0.2)" },
+  P2: { bg: "rgba(255,102,0,0.1)", color: "var(--accent-primary)", border: "1px solid rgba(255,102,0,0.2)" },
 };
 
 const STATUS_STYLES = {
-  done:     { bg: "rgba(0,212,177,0.1)",   color: "var(--teal)", text: "✓ Done" },
-  building: { bg: "rgba(248,188,66,0.1)",  color: "var(--amber)", text: "⟳ Building" },
-  planned:  { bg: "var(--bg4)",            color: "var(--text-muted)", text: "📋 Planned" },
+  done:     { bg: "rgba(255,102,0,0.1)",   color: "var(--accent-primary)", text: "✓ Done" },
+  building: { bg: "rgba(255,102,0,0.1)",  color: "var(--accent-primary)", text: "⟳ Building" },
+  planned:  { bg: "var(--bg-tertiary)",            color: "var(--text-muted)", text: "📋 Planned" },
 };
 
 export default function RoadmapPage() {
@@ -42,7 +42,7 @@ export default function RoadmapPage() {
             OneAtlas Build Plan<br />
             <span
               style={{
-                background: "linear-gradient(135deg, #fff 0%, var(--v2) 55%, var(--accent-primary) 100%)",
+                background: "none 55%, var(--accent-primary) 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -57,8 +57,8 @@ export default function RoadmapPage() {
           {/* Stats row */}
           <div className="flex gap-4 mt-6 flex-wrap">
             {[
-              { label: "Done",     count: ROADMAP_ITEMS.filter(r => r.status === "done").length,     color: "var(--teal)" },
-              { label: "Building", count: ROADMAP_ITEMS.filter(r => r.status === "building").length, color: "var(--amber)" },
+              { label: "Done",     count: ROADMAP_ITEMS.filter(r => r.status === "done").length,     color: "var(--accent-primary)" },
+              { label: "Building", count: ROADMAP_ITEMS.filter(r => r.status === "building").length, color: "var(--accent-primary)" },
               { label: "Planned",  count: ROADMAP_ITEMS.filter(r => r.status === "planned").length,  color: "var(--text-muted)" },
             ].map(({ label, count, color }) => (
               <div
@@ -148,8 +148,8 @@ export default function RoadmapPage() {
         <motion.div
           className="mt-12 p-8 rounded-2xl text-center"
           style={{
-            background: "linear-gradient(135deg, rgba(99,91,255,0.1), rgba(99,91,255,0.03))",
-            border: "1px solid rgba(99,91,255,0.18)",
+            background: "none, rgba(255,102,0,0.03))",
+            border: "1px solid rgba(255,102,0,0.18)",
           }}
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}

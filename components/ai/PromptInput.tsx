@@ -63,9 +63,9 @@ export default function PromptInput({
         className="prompt-box"
         animate={focused ? { scale: 1 } : { scale: 1 }}
         style={{
-          borderColor: focused ? "rgba(99,91,255,0.4)" : undefined,
+          borderColor: focused ? "rgba(255,102,0,0.4)" : undefined,
           boxShadow: focused
-            ? "0 8px 48px rgba(0,0,0,0.55), 0 0 0 1px rgba(99,91,255,0.3), 0 0 40px rgba(99,91,255,0.12), 0 0 0 4px rgba(99,91,255,0.06)"
+            ? "0 8px 48px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,102,0,0.3), 0 0 40px rgba(255,102,0,0.12), 0 0 0 4px rgba(255,102,0,0.06)"
             : undefined,
         }}
       >

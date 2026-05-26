@@ -43,8 +43,8 @@ export default function WorkspacePage() {
           <span className="text-[13px] font-semibold">📊 Sales Dashboard</span>
           <motion.button
             className="w-[26px] h-[26px] rounded-[6px] flex items-center justify-center text-xs"
-            style={{ background: "var(--bg3)", border: "1px solid var(--border-color)", color: "var(--text-muted)" }}
-            whileHover={{ background: "var(--bg4)", color: "var(--text-primary)" }}
+            style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", color: "var(--text-muted)" }}
+            whileHover={{ background: "var(--bg-tertiary)", color: "var(--text-primary)" }}
             whileTap={{ scale: 0.95 }}
             onClick={() => toast("⚙️", "App settings coming soon")}
           >
@@ -62,7 +62,7 @@ export default function WorkspacePage() {
                 <motion.button
                   key={label}
                   className={`flex items-center gap-1.5 w-full px-2.5 py-1.5 rounded-md text-xs text-left transition-all mb-0.5 ${activeNav === label ? "text-accent-light" : "text-text-3 hover:text-text-1 hover:bg-surface-3"}`}
-                  style={activeNav === label ? { background: "rgba(99,91,255,0.09)" } : {}}
+                  style={activeNav === label ? { background: "rgba(255,102,0,0.09)" } : {}}
                   onClick={() => setActiveNav(label)}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -103,7 +103,7 @@ export default function WorkspacePage() {
           <div className="flex gap-1.5">
             <motion.button
               className="text-[11px] font-semibold px-3 py-1.5 rounded-md transition-all"
-              style={{ background: "var(--bg3)", color: "var(--text-primary)", border: "1px solid var(--border-color)" }}
+              style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid var(--border-color)" }}
               whileHover={{ borderColor: "var(--b2)" }}
               whileTap={{ scale: 0.97 }}
               onClick={() => toast("🔗", "Share link copied to clipboard!")}
@@ -112,7 +112,7 @@ export default function WorkspacePage() {
             </motion.button>
             <motion.button
               className="text-[11px] font-semibold px-3 py-1.5 rounded-md"
-              style={{ background: "var(--teal)", color: "#000" }}
+              style={{ background: "var(--accent-primary)", color: "#000" }}
               whileHover={{ opacity: 0.9, y: -1 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => toast("🚀", "Deploying to Cloudflare edge...")}
@@ -180,8 +180,8 @@ export default function WorkspacePage() {
                 <motion.div
                   key={deal.name}
                   className="flex items-center justify-between text-xs px-3 py-2.5 rounded-md"
-                  style={{ background: "var(--bg3)" }}
-                  whileHover={{ background: "var(--bg4)" }}
+                  style={{ background: "var(--bg-secondary)" }}
+                  whileHover={{ background: "var(--bg-tertiary)" }}
                 >
                   <span className="font-medium">{deal.name}</span>
                   <span style={{ color: "var(--text-muted)" }}>{deal.amount}</span>
@@ -197,7 +197,7 @@ export default function WorkspacePage() {
           <span>Last modified: 2 hours ago</span>
           <div className="flex items-center gap-3">
             <span>Schema v3</span>
-            <div className="w-2 h-2 rounded-full" style={{ background: "var(--teal)", boxShadow: "0 0 6px var(--teal)" }} />
+            <div className="w-2 h-2 rounded-full" style={{ background: "var(--accent-primary)", boxShadow: "0 0 6px var(--accent-primary)" }} />
             <span>Connected</span>
           </div>
         </div>

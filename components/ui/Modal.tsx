@@ -74,12 +74,12 @@ export default function Modal({
               <motion.button
                 className="w-[30px] h-[30px] rounded-md flex items-center justify-center text-sm"
                 style={{
-                  background: "var(--bg3)",
+                  background: "var(--bg-secondary)",
                   border: "1px solid var(--border-color)",
                   color: "var(--text-muted)",
                 }}
                 onClick={onClose}
-                whileHover={{ background: "var(--bg4)", color: "var(--text-primary)" }}
+                whileHover={{ background: "var(--bg-tertiary)", color: "var(--text-primary)" }}
                 whileTap={{ scale: 0.95 }}
               >
                 ✕
@@ -135,7 +135,7 @@ export function CompareContent({ onUse }: CompareContentProps) {
           <div
             key={col.name}
             className="rounded-xl p-4"
-            style={{ background: "var(--bg3)", border: "1px solid var(--border-color)" }}
+            style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)" }}
           >
             <h4 className="text-sm font-bold mb-3">{col.name}</h4>
             {col.rows.map(([k, v]) => (
@@ -195,13 +195,13 @@ export function PreviewContent({
       {/* Preview canvas */}
       <div
         className="h-[380px] rounded-xl flex items-center justify-center text-7xl mb-5 relative overflow-hidden"
-        style={{ background: "var(--bg3)", border: "1px solid var(--border-color)" }}
+        style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)" }}
       >
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "radial-gradient(ellipse at 30% 40%, rgba(99,91,255,0.12), transparent 60%)",
+              "radial-gradient(ellipse at 30% 40%, rgba(255,102,0,0.12), transparent 60%)",
           }}
         />
         <motion.span

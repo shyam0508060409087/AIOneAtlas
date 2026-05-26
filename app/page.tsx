@@ -11,18 +11,18 @@ const FEATURES = [
   {
     num: "01 / 05",
     icon: "💬",
-    iconBg: "rgba(99,91,255,0.12)",
+    iconBg: "rgba(255,102,0,0.12)",
     title: "Describe. Build. Ship.",
     desc: "Tell OneAtlas your idea in plain English. The AI designs your schema, builds every page, sets up auth, and deploys to Cloudflare's edge — in under 60 seconds.",
     kpi: "🎯 5s to first preview · 60s to deploy",
     span: 12,
     cardClass: "bg-gradient-violet-glow",
-    borderColor: "rgba(99,91,255,0.18)",
+    borderColor: "rgba(255,102,0,0.18)",
   },
   {
     num: "02 / 05",
     icon: "⚡",
-    iconBg: "rgba(0,212,177,0.1)",
+    iconBg: "rgba(255,102,0,0.1)",
     title: "Edge-native runtime",
     desc: "Cloudflare Workers + Neon DB. Your app runs at the edge, in 300+ cities, from day one.",
     kpi: "🌍 49 regions · 100% uptime",
@@ -31,7 +31,7 @@ const FEATURES = [
   {
     num: "03 / 05",
     icon: "🔐",
-    iconBg: "rgba(248,188,66,0.1)",
+    iconBg: "rgba(255,102,0,0.1)",
     title: "Auth in 3 seconds",
     desc: "Email + OAuth built in. No Supabase wiring, no Auth0 config.",
     kpi: "✓ 100% auth success on MVP apps",
@@ -40,7 +40,7 @@ const FEATURES = [
   {
     num: "04 / 05",
     icon: "🧠",
-    iconBg: "rgba(0,212,255,0.1)",
+    iconBg: "rgba(255,102,0,0.1)",
     title: "AI that remembers",
     desc: "Workspace-level memory. The AI knows your stack, team, and preferences across every session.",
     kpi: "📍 Context in 80% of sessions",
@@ -49,7 +49,7 @@ const FEATURES = [
   {
     num: "05 / 05",
     icon: "🔮",
-    iconBg: "rgba(255,89,150,0.1)",
+    iconBg: "rgba(255,102,0,0.1)",
     title: "Multi-model AI gateway",
     desc: "Claude + GPT-4 + Gemini — automatically routed to the best model for each task.",
     kpi: "⚡ AI latency <3s p90",
@@ -67,11 +67,11 @@ const TRENDING = [
 ];
 
 const PROOF_AVATARS = [
-  { letter: "A", gradient: "linear-gradient(135deg,var(--accent-primary),var(--v2))" },
-  { letter: "B", gradient: "linear-gradient(135deg,var(--teal),var(--sky))" },
-  { letter: "C", gradient: "linear-gradient(135deg,var(--orange),var(--amber))" },
-  { letter: "D", gradient: "linear-gradient(135deg,var(--rose),var(--accent-primary))" },
-  { letter: "E", gradient: "linear-gradient(135deg,var(--teal),var(--sky))" },
+  { letter: "A", gradient: "none,var(--accent-primary))" },
+  { letter: "B", gradient: "none,var(--sky))" },
+  { letter: "C", gradient: "none,var(--accent-primary))" },
+  { letter: "D", gradient: "none,var(--accent-primary))" },
+  { letter: "E", gradient: "none,var(--sky))" },
 ];
 
 // ── PAGE ─────────────────────────────────────
@@ -94,15 +94,15 @@ export default function HomePage() {
         <motion.button
           className="inline-flex items-center gap-2 mb-7 px-4 py-1.5 rounded-full text-xs font-medium cursor-pointer transition-all"
           style={{
-            background: "rgba(99,91,255,0.07)",
-            border: "1px solid rgba(99,91,255,0.18)",
-            color: "var(--v2)",
+            background: "rgba(255,102,0,0.07)",
+            border: "1px solid rgba(255,102,0,0.18)",
+            color: "var(--accent-primary)",
           }}
           onClick={() => toast("✨", "4,200+ builders on the waitlist!")}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          whileHover={{ background: "rgba(99,91,255,0.12)", borderColor: "rgba(99,91,255,0.28)" }}
+          whileHover={{ background: "rgba(255,102,0,0.12)", borderColor: "rgba(255,102,0,0.28)" }}
         >
           <span
             className="w-[7px] h-[7px] rounded-full bg-accent"
@@ -172,7 +172,7 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <span style={{ color: "var(--amber)", letterSpacing: "-1px" }}>★★★★★</span>
+          <span style={{ color: "var(--accent-primary)", letterSpacing: "-1px" }}>★★★★★</span>
           <span>Loved by 4,200+ builders worldwide</span>
         </motion.div>
 
@@ -218,7 +218,7 @@ export default function HomePage() {
               style={{
                 background: f.cardClass ? `var(--bg-secondary)` : "var(--bg-secondary)",
                 border: `1px solid ${f.borderColor || "var(--border-color)"}`,
-                ...(f.cardClass && { background: "linear-gradient(135deg, rgba(99,91,255,0.08), var(--bg-secondary))" }),
+                ...(f.cardClass && { background: "none, var(--bg-secondary))" }),
               }}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -240,9 +240,9 @@ export default function HomePage() {
               <div
                 className="mt-4 inline-flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1 rounded-full"
                 style={{
-                  background: "rgba(0,212,177,0.08)",
-                  border: "1px solid rgba(0,212,177,0.15)",
-                  color: "var(--teal)",
+                  background: "rgba(255,102,0,0.08)",
+                  border: "1px solid rgba(255,102,0,0.15)",
+                  color: "var(--accent-primary)",
                 }}
               >
                 {f.kpi}
@@ -292,7 +292,7 @@ export default function HomePage() {
             >
               <div
                 className="w-[38px] h-[38px] rounded-xl flex items-center justify-center text-[19px] mb-3"
-                style={{ background: "rgba(99,91,255,0.08)" }}
+                style={{ background: "rgba(255,102,0,0.08)" }}
               >
                 {t.emoji}
               </div>
@@ -307,7 +307,7 @@ export default function HomePage() {
       {/* ═══ FOOTER ═══ */}
       <footer className="max-w-[1140px] mx-auto px-7 py-10 flex items-center justify-between flex-wrap gap-4" style={{ borderTop: "1px solid var(--border-light)" }}>
         <div className="flex items-center gap-2.5">
-          <div className="w-7 h-7 rounded-[8px] flex items-center justify-center text-sm" style={{ background: "linear-gradient(135deg,var(--accent-primary),var(--v2))" }}>🌐</div>
+          <div className="w-7 h-7 rounded-[8px] flex items-center justify-center text-sm" style={{ background: "none,var(--accent-primary))" }}>🌐</div>
           <span className="text-sm font-bold gradient-text">OneAtlas</span>
         </div>
         <div className="flex gap-6 flex-wrap">

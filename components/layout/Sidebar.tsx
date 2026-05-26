@@ -61,9 +61,9 @@ const TEMPLATE_SIDEBAR: SidebarItem[] = [
 // ── BADGE STYLES ─────────────────────────────────────────────────
 
 const BADGE_STYLES: Record<"live" | "new" | "building", string> = {
-  live:     "bg-[rgba(0,212,177,0.1)]   text-[var(--teal)]  border border-[rgba(0,212,177,0.2)]",
-  new:      "bg-[rgba(248,188,66,0.1)]  text-[var(--amber)]  border border-[rgba(248,188,66,0.2)]",
-  building: "bg-[rgba(99,91,255,0.1)] text-[var(--accent-primary)] border border-[rgba(99,91,255,0.2)]",
+  live:     "bg-[rgba(255,102,0,0.1)]   text-[var(--accent-primary)]  border border-[rgba(255,102,0,0.2)]",
+  new:      "bg-[rgba(255,102,0,0.1)]  text-[var(--accent-primary)]  border border-[rgba(255,102,0,0.2)]",
+  building: "bg-[rgba(255,102,0,0.1)] text-[var(--accent-primary)] border border-[rgba(255,102,0,0.2)]",
 };
 
 // ── COMPONENT ────────────────────────────────────────────────────
@@ -95,8 +95,8 @@ export default function Sidebar({ variant = "dashboard", newAppClick }: SidebarP
         <motion.button
           onClick={newAppClick}
           className="flex items-center gap-2 w-full px-3 py-2.5 mb-3 rounded-lg text-sm font-semibold text-white"
-          style={{ background: "var(--accent-primary)", boxShadow: "0 2px 14px rgba(99,91,255,0.3)" }}
-          whileHover={{ opacity: 0.9, boxShadow: "0 4px 22px rgba(99,91,255,0.45)" }}
+          style={{ background: "var(--accent-primary)", boxShadow: "0 2px 14px rgba(255,102,0,0.3)" }}
+          whileHover={{ opacity: 0.9, boxShadow: "0 4px 22px rgba(255,102,0,0.45)" }}
           whileTap={{ scale: 0.98 }}
         >
           <span className="text-base">＋</span> New App
@@ -129,7 +129,7 @@ export default function Sidebar({ variant = "dashboard", newAppClick }: SidebarP
             className={`flex items-center gap-2 w-full px-2.5 py-[7px] rounded-md text-xs cursor-pointer mb-0.5 transition-colors ${
               isActive ? "text-[var(--accent-primary)]" : "text-text-3 hover:text-text-1"
             }`}
-            style={isActive ? { background: "rgba(99,91,255,0.09)" } : {}}
+            style={isActive ? { background: "rgba(255,102,0,0.09)" } : {}}
             whileTap={{ scale: 0.98 }}
           >
             <span className="text-[15px] w-5 text-center flex-shrink-0">{navItem.icon}</span>

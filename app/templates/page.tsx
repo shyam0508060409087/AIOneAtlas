@@ -65,7 +65,7 @@ function TemplatesPageContent() {
         <div className="flex items-center justify-between px-8 py-3.5 gap-3 overflow-x-auto" style={{ borderBottom: "1px solid var(--border-light)" }}>
           <div className="flex gap-1.5 flex-shrink-0">
             {TEMPLATE_CATEGORIES.map((cat) => (
-              <motion.button key={cat} className={`px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${activeCategory === cat ? "text-accent-light" : "text-text-3 hover:text-text-1"}`} style={{ background: activeCategory === cat ? "rgba(99,91,255,0.1)" : "var(--bg-secondary)", border: `1px solid ${activeCategory === cat ? "rgba(99,91,255,0.3)" : "var(--border-color)"}` }} onClick={() => { setActiveCategory(cat); router.push(`/templates?cat=${cat}`); }} whileTap={{ scale: 0.97 }}>{cat}</motion.button>
+              <motion.button key={cat} className={`px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${activeCategory === cat ? "text-accent-light" : "text-text-3 hover:text-text-1"}`} style={{ background: activeCategory === cat ? "rgba(255,102,0,0.1)" : "var(--bg-secondary)", border: `1px solid ${activeCategory === cat ? "rgba(255,102,0,0.3)" : "var(--border-color)"}` }} onClick={() => { setActiveCategory(cat); router.push(`/templates?cat=${cat}`); }} whileTap={{ scale: 0.97 }}>{cat}</motion.button>
             ))}
           </div>
         </div>

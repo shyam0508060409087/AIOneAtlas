@@ -24,9 +24,9 @@ const DEFAULT_STEPS: AIStep[] = [
 ];
 
 const STEP_DOT = {
-  done:    { bg: "rgba(0,212,177,0.12)",   color: "var(--teal)", icon: "✓" },
-  active:  { bg: "rgba(99,91,255,0.12)", color: "var(--v2)", icon: "⟳" },
-  waiting: { bg: "var(--bg4)",             color: "var(--text-muted)", icon: "○" },
+  done:    { bg: "rgba(255,102,0,0.12)",   color: "var(--accent-primary)", icon: "✓" },
+  active:  { bg: "rgba(255,102,0,0.12)", color: "var(--accent-primary)", icon: "⟳" },
+  waiting: { bg: "var(--bg-tertiary)",             color: "var(--text-muted)", icon: "○" },
 };
 
 export function StreamingCursor() {
@@ -82,7 +82,7 @@ export default function AIProgressCard({
       <div className="flex items-center gap-2.5 mb-4 text-sm font-semibold">
         <div
           className="w-7 h-7 rounded-[7px] flex items-center justify-center text-sm flex-shrink-0"
-          style={{ background: "linear-gradient(135deg, var(--accent-primary), var(--v2))" }}
+          style={{ background: "none, var(--accent-primary))" }}
         >
           🌐
         </div>

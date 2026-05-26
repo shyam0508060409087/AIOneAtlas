@@ -58,18 +58,18 @@ export default function TemplateCard({
             >
               <motion.button
                 className="tovbtn-p px-4 py-2 rounded-lg text-xs font-semibold text-white"
-                style={{ background: "var(--accent-primary)", boxShadow: "0 2px 12px rgba(99,91,255,0.35)" }}
+                style={{ background: "var(--accent-primary)", boxShadow: "0 2px 12px rgba(255,102,0,0.35)" }}
                 onClick={(e) => { e.stopPropagation(); onPreview(template); }}
-                whileHover={{ background: "var(--v2)" }}
+                whileHover={{ background: "var(--accent-primary)" }}
                 whileTap={{ scale: 0.97 }}
               >
                 Preview
               </motion.button>
               <motion.button
                 className="px-4 py-2 rounded-lg text-xs font-semibold"
-                style={{ background: "var(--bg4)", color: "var(--text-primary)", border: "1px solid var(--b2)" }}
+                style={{ background: "var(--bg-tertiary)", color: "var(--text-primary)", border: "1px solid var(--b2)" }}
                 onClick={(e) => { e.stopPropagation(); onUse(template); }}
-                whileHover={{ background: "var(--bg5)" }}
+                whileHover={{ background: "var(--bg-tertiary)" }}
                 whileTap={{ scale: 0.97 }}
               >
                 Use →
@@ -89,7 +89,7 @@ export default function TemplateCard({
         <div className="flex items-center justify-between">
           <div className="flex gap-1.5 flex-wrap">
             {template.tags.map((tag) => (
-              <span key={tag} className="text-[10px] px-2 py-[2px] rounded-full" style={{ background: "var(--bg4)", color: "var(--text-muted)", border: "1px solid var(--border-color)" }}>
+              <span key={tag} className="text-[10px] px-2 py-[2px] rounded-full" style={{ background: "var(--bg-tertiary)", color: "var(--text-muted)", border: "1px solid var(--border-color)" }}>
                 {tag}
               </span>
             ))}
@@ -99,13 +99,13 @@ export default function TemplateCard({
             onClick={toggleSave}
             className="w-7 h-7 rounded-md flex items-center justify-center text-[13px] transition-colors flex-shrink-0"
             style={{
-              background: "var(--bg3)",
+              background: "var(--bg-secondary)",
               border: "1px solid var(--border-color)",
-              color: saved ? "var(--amber)" : "var(--text-muted)",
+              color: saved ? "var(--accent-primary)" : "var(--text-muted)",
             }}
             whileHover={{
-              color: "var(--amber)",
-              borderColor: "rgba(248,188,66,0.3)",
+              color: "var(--accent-primary)",
+              borderColor: "rgba(255,102,0,0.3)",
             }}
             whileTap={{ scale: 0.9 }}
           >
