@@ -1,6 +1,6 @@
 # OneAtlas
 
-OneAtlas is a frontend product experience for an AI-native app builder. It presents a polished public homepage, product page, dashboard, template library, workspace preview, and roadmap flow using a production-ready Next.js frontend stack.
+OneAtlas is an internship project, frontend product experience for an AI-native app builder. It presents a polished public homepage, product page, dashboard, template library, workspace preview, and roadmap flow using a production-ready Next.js frontend stack.
 
 ## Live Deployment
 
